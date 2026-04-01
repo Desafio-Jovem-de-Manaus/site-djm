@@ -100,7 +100,7 @@ export default function Footer() {
                 <Clock className="w-5 h-5 text-accent-light flex-shrink-0 mt-0.5" />
                 <span className="text-blue-100 text-sm font-medium flex flex-col gap-1">
                   <span>Administrativo: Seg a Sex, 8h às 17h</span>
-                  <span>Público Externo: Seg a Sex, 9h às 17h</span>
+                  <span>Público Externo: Seg a Sex, 9h às 16h</span>
                 </span>
               </li>
             </ul>

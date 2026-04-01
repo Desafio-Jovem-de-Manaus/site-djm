@@ -79,13 +79,15 @@ export default function HeroSection() {
           
           <div className="max-w-2xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in shadow-black drop-shadow-lg">
-              Esperança e Recuperação para quem precisa
+              Desde 1981 resgatando vidas na Amazônia
             </h1>
             <p className="text-xl md:text-2xl text-highlight font-medium mb-6 animate-fade-in animation-delay-100">
-              Desde 1981 promovendo o cuidado integral do ser humano em Manaus
+              Promovendo o cuidado integral e a reinserção social de pessoas em situação de vulnerabilidade em Manaus.
             </p>
             <p className="text-lg text-blue-100 mb-8 animate-fade-in animation-delay-200 leading-relaxed">
-              Somos uma Organização da Sociedade Civil dedicada à prevenção, recuperação e reinserção social de pessoas em situação de vulnerabilidade, dependência química e situação de rua. Já realizamos mais de 40.000 atendimentos ao longo de nossa história.
+              Somos uma Organização da Sociedade Civil (OSC) dedicada à prevenção, acolhimento e reinserção social de pessoas em situação de vulnerabilidade, dependência química e situação de rua.
+              <br/><br/>
+              Desde a nossa fundação, temos atuado de forma contínua na promoção da dignidade humana, já tendo realizado mais de 40.000 atendimentos e impactado diretamente milhares de vidas e famílias na região amazônica.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in animation-delay-300">
               <Link href="/contato" className="inline-flex items-center justify-center px-8 py-4 bg-accent hover:bg-accent-light text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:-translate-y-1">

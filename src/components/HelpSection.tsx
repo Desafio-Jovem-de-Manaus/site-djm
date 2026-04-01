@@ -21,24 +21,28 @@ export default function HelpSection() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">Ajude a transformar vidas</h2>
             
             <p className="text-lg md:text-xl text-blue-50 mb-6 leading-relaxed">
-              O Desafio Jovem de Manaus atende aproximadamente 120 pessoas ao longo do ano em seus serviços de acolhimento institucional, além de milhares de beneficiários nas ações de abordagem social e nos projetos comunitários. 
+              O Desafio Jovem de Manaus realiza, anualmente, cerca de 120 acolhimentos institucionais, além de alcançar milhares de pessoas por meio de ações de abordagem social e projetos comunitários.
             </p>
             
             <div className="bg-primary-dark/50 border-l-4 border-highlight p-6 rounded-r-xl mb-8">
-              <p className="text-base font-semibold leading-relaxed">
-                69% dos acolhidos não possuem renda fixa, 81% estão desempregados e 47% têm apenas o ensino fundamental incompleto. <span className="text-rose-200">Sua ajuda é a nossa principal força.</span>
+              <p className="text-base font-semibold leading-relaxed mb-4">
+                O perfil dos atendidos evidencia a importância da atuação institucional:
+              </p>
+              <ul className="list-disc pl-5 mb-4 space-y-1">
+                <li>69% não possuem renda fixa;</li>
+                <li>81% encontram-se desempregados;</li>
+                <li>47% possuem ensino fundamental incompleto.</li>
+              </ul>
+              <p className="text-base font-semibold leading-relaxed text-rose-200">
+                Esses dados reforçam a necessidade de ações contínuas voltadas à inclusão social e ao resgate da dignidade humana.
               </p>
             </div>
 
-            <div className="mb-10">
-              <h3 className="font-bold text-lg mb-3">Nossas prioridades contínuas:</h3>
-              <ul className="grid sm:grid-cols-2 gap-3 text-sm text-blue-100 font-medium">
-                <li className="flex items-center"><span className="w-1.5 h-1.5 bg-white rounded-full mr-2"></span>Alimentos</li>
-                <li className="flex items-center"><span className="w-1.5 h-1.5 bg-white rounded-full mr-2"></span>Roupas</li>
-                <li className="flex items-center"><span className="w-1.5 h-1.5 bg-white rounded-full mr-2"></span>Materiais de higiene pessoal</li>
-                <li className="flex items-center"><span className="w-1.5 h-1.5 bg-white rounded-full mr-2"></span>Materiais de limpeza</li>
-                <li className="flex items-center"><span className="w-1.5 h-1.5 bg-white rounded-full mr-2"></span>Roupas de cama e banho</li>
-              </ul>
+            <div className="mb-10 bg-white/10 p-6 rounded-xl border border-white/20">
+              <p className="font-bold text-lg mb-3">Sua contribuição é fundamental para a continuidade e ampliação desses serviços.</p>
+              <p className="text-blue-100 font-medium">
+                Ao apoiar o Desafio Jovem de Manaus, você participa diretamente da transformação de vidas e do fortalecimento de comunidades em situação de vulnerabilidade na Amazônia.
+              </p>
             </div>
 
             <div className="flex flex-wrap gap-4">

@@ -10,7 +10,7 @@ export default function ServicesSection() {
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-primary-dark mb-6">Serviços Institucionais</h2>
           <p className="text-xl text-slate-600">
-            quatro motores de mudança para transformação de vidas
+            Quatro frentes de atuação voltadas à transformação social e ao desenvolvimento humano
           </p>
         </div>
 
@@ -28,9 +28,19 @@ export default function ServicesSection() {
               <h3 className="text-2xl font-bold text-primary-dark mb-2">Tratamento e recuperação desde 1985</h3>
               <p className="text-sm font-semibold text-slate-500 mb-4 pb-4 border-b border-slate-100">Projeto: Recuperação e Ressocialização Familiar</p>
               
-              <p className="text-slate-600 mb-6 flex-grow">
-                Tratamento voluntário para homens adultos dependentes de álcool e outras drogas, em regime de residência por 6 meses. Equipe multiprofissional com psicólogos, assistentes sociais e pedagoga. Programa inclui oficinas terapêuticas, atendimento psicológico individual, atividades físicas e esportivas, espiritualidade, alfabetização e reforço escolar, oficinas de iniciação profissional e Programa de Prevenção à Recaída.
-              </p>
+              <div className="text-slate-600 mb-6 flex-grow">
+                <p className="mb-4">Programa de acolhimento voluntário destinado a homens adultos com dependência de álcool e outras drogas, realizado em regime residencial, com duração média de seis meses.</p>
+                <p className="mb-2">Conta com uma vasta equipe técnica multidisciplinar, oferecendo atendimento integral por meio de:</p>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  <li>acompanhamento psicossocial;</li>
+                  <li>oficinas terapêuticas e ocupacionais;</li>
+                  <li>atividades físicas e esportivas;</li>
+                  <li>ações de espiritualidade;</li>
+                  <li>alfabetização e reforço escolar;</li>
+                  <li>capacitação profissional;</li>
+                  <li>estratégias de prevenção à recaída.</li>
+                </ul>
+              </div>
 
               <div className="bg-purple-50 p-4 rounded-xl mb-6">
                 <p className="text-sm font-bold text-purple-900 mb-2">Impacto em 2024</p>
@@ -62,9 +72,16 @@ export default function ServicesSection() {
               <h3 className="text-2xl font-bold text-primary-dark mb-2">Acolher para Viver — desde 2018</h3>
               <p className="text-sm font-semibold text-slate-500 mb-4 pb-4 border-b border-slate-100">Projeto: Ressocialização Familiar e Comunitária — Acolher para Viver</p>
               
-              <p className="text-slate-600 mb-6 flex-grow">
-                Acolhimento institucional para homens adultos (18-59 anos) em situação de rua, desabrigo por moradia, trânsito e sem condições de autossustento. Oferece proteção integral, convivência comunitária, atendimento psicossocial, oficinas profissionalizantes (barbearia, massas, artes), alfabetização, atividades desportivas e encaminhamentos para a rede socioassistencial e SUS.
-              </p>
+              <div className="text-slate-600 mb-6 flex-grow">
+                <p className="mb-4">Serviço de acolhimento institucional voltado a homens adultos (18 a 59 anos) em situação de rua, desabrigo ou vulnerabilidade social, sem condições de autossustento.</p>
+                <p className="mb-2">Oferece proteção integral, atendimento psicossocial e suporte para a reconstrução de vínculos sociais, por meio de:</p>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  <li>atividades educativas e de convivência;</li>
+                  <li>oficinas de qualificação profissional;</li>
+                  <li>alfabetização;</li>
+                  <li>encaminhamento à rede socioassistencial e às demais políticas públicas.</li>
+                </ul>
+              </div>
 
               <div className="bg-blue-50 p-4 rounded-xl mb-6">
                 <p className="text-sm font-bold text-blue-900 mb-2">Impacto em 2024</p>
@@ -96,9 +113,17 @@ export default function ServicesSection() {
               <h3 className="text-2xl font-bold text-primary-dark mb-2">Braços Abertos — desde 2015</h3>
               <p className="text-sm font-semibold text-slate-500 mb-4 pb-4 border-b border-slate-100">Projeto: Braços Abertos na Perspectiva da Garantia de Direitos</p>
               
-              <p className="text-slate-600 mb-6 flex-grow">
-                Serviço especializado de busca ativa nas ruas, praças e espaços públicos de Manaus. A equipe realiza escuta qualificada, encaminhamentos para a rede socioassistencial, ações socioeducativas, de sensibilização, cidadania e resolução de necessidades imediatas para pessoas em situação de rua.
-              </p>
+              <div className="text-slate-600 mb-6 flex-grow text-sm">
+                <p className="mb-3">Serviço especializado de abordagem social, realizado de forma continuada e programada em espaços públicos, com a finalidade de identificar, acolher e atender pessoas em situação de rua ou em vulnerabilidade social.</p>
+                <p className="mb-3">A atuação envolve escuta qualificada, construção de vínculo e encaminhamento para a rede de proteção social, garantindo acesso a direitos e serviços socioassistenciais, com intervenções pautadas no respeito, na dignidade e na autonomia dos usuários.</p>
+                <p className="mb-2">Inclui ações de:</p>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>busca ativa e identificação de demandas;</li>
+                  <li>orientação e apoio imediato;</li>
+                  <li>articulação com a rede socioassistencial e demais políticas públicas;</li>
+                  <li>encaminhamento para serviços de acolhimento e atendimento continuado.</li>
+                </ul>
+              </div>
 
               <div className="bg-orange-50 p-4 rounded-xl mb-6">
                 <p className="text-sm font-bold text-orange-900 mb-2">Impacto em 2024</p>
@@ -129,9 +154,17 @@ export default function ServicesSection() {
               <h3 className="text-2xl font-bold text-primary-dark mb-2">Fortalecimento de vínculos comunitários</h3>
               <p className="text-sm font-semibold text-slate-500 mb-4 pb-4 border-b border-slate-100">Projeto: Comunidade Eficiente — COMEFI</p>
               
-              <p className="text-slate-600 mb-6 flex-grow">
-                Serviço de Convivência e Fortalecimento de Vínculos voltado para famílias em situação de vulnerabilidade social no entorno da instituição. Realiza oficinas de capacitação profissional (produção de massas, empreendedorismo), palestras de prevenção, apoio alimentar e ações comunitárias. Foco especial no protagonismo feminino e na autonomia econômica.
-              </p>
+              <div className="text-slate-600 mb-6 flex-grow">
+                <p className="mb-4">Serviço de Convivência e Fortalecimento de Vínculos voltado a famílias em situação de vulnerabilidade social no território de abrangência da instituição.</p>
+                <p className="mb-2">Desenvolve ações que visam o fortalecimento de vínculos familiares e comunitários, por meio de:</p>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  <li>capacitação profissional e geração de renda;</li>
+                  <li>oficinas de empreendedorismo;</li>
+                  <li>atividades socioeducativas;</li>
+                  <li>apoio social e alimentar;</li>
+                  <li>promoção da autonomia e do protagonismo social.</li>
+                </ul>
+              </div>
 
               <div className="bg-blue-50 p-4 rounded-xl mb-6">
                 <p className="text-sm font-bold text-primary-dark mb-2">Impacto em 2024</p>

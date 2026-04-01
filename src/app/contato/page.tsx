@@ -154,7 +154,7 @@ export default function ContatoPage() {
                 </div>
                 <div className="flex justify-between w-full max-w-xs border-b border-dashed border-slate-200 pb-1">
                   <span className="text-slate-500 font-medium tracking-wide">Público Externo:</span>
-                  <span className="text-primary-dark font-bold">Seg a Sex, 9h às 17h</span>
+                  <span className="text-primary-dark font-bold">Seg a Sex, 9h às 16h</span>
                 </div>
               </div>
             </div>

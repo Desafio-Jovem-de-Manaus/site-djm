@@ -113,7 +113,7 @@ export default function ContactSection() {
                   </li>
                   <li className="flex justify-between border-b border-slate-100 pb-2">
                     <span className="font-medium">Público Externo:</span>
-                    <span>Seg a Sex, 9h às 17h</span>
+                    <span>Seg a Sex, 9h às 16h</span>
                   </li>
                   <li className="flex justify-between">
                     <span className="font-medium">Acolhimento:</span>
