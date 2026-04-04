@@ -7,7 +7,7 @@ export const notion = new Client({
 export const DATABASE_ID = process.env.NOTION_DATABASE_ID!;
 
 export async function getPublishedPosts() {
-  const response = await notion.databases.query({
+  const response = await (notion as any).databases.query({
     database_id: DATABASE_ID,
     filter: {
       property: "Status",
