@@ -12,7 +12,7 @@ export async function getPublishedPosts() {
     filter: {
       property: "Status",
       status: {
-        equals: "Concluída",
+        equals: "Concluído",
       },
     },
     sorts: [
