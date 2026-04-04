@@ -39,7 +39,7 @@ export default function InstagramSection() {
       username: "@desafiojovemdemanaus",
       url: "https://www.instagram.com/desafiojovemdemanaus/",
       avatar: "/logo-Instagram-ct.jpg",
-      description: "Acompanhe o dia a dia da recuperação, as atividades de laborterapia e as transformações de vidas no nosso centro.",
+      description: "Acompanhe o dia a dia da recuperação, as atividades diárias e as transformações de vidas no nosso centro.",
       posts: [
         { link: "https://www.instagram.com/p/DExalvnPynN/?img_index=1" },
         { link: "https://www.instagram.com/p/DNrAQ5fZMoa/" },

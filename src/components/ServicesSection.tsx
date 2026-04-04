@@ -151,7 +151,7 @@ export default function ServicesSection() {
             </div>
             <div className="p-8 flex-grow flex flex-col border-t-4 border-primary">
               <div className="text-primary font-bold tracking-wider text-sm mb-2 uppercase">Comunidade Eficiente</div>
-              <h3 className="text-2xl font-bold text-primary-dark mb-2">Fortalecimento de vínculos comunitários</h3>
+              <h3 className="text-2xl font-bold text-primary-dark mb-2">Fortalecimento de vínculos comunitários — desde 2015</h3>
               <p className="text-sm font-semibold text-slate-500 mb-4 pb-4 border-b border-slate-100">Projeto: Comunidade Eficiente — COMEFI</p>
               
               <div className="text-slate-600 mb-6 flex-grow">

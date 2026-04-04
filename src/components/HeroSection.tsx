@@ -85,9 +85,9 @@ export default function HeroSection() {
               Promovendo o cuidado integral e a reinserção social de pessoas em situação de vulnerabilidade em Manaus.
             </p>
             <p className="text-lg text-blue-100 mb-8 animate-fade-in animation-delay-200 leading-relaxed">
-              Somos uma Organização da Sociedade Civil (OSC) dedicada à prevenção, acolhimento e reinserção social de pessoas em situação de vulnerabilidade, dependência química e situação de rua.
+              Somos uma Organização da Sociedade Civil de base cristã, dedicada à prevenção, acolhimento, recuperação e reinserção social de pessoas em situação de vulnerabilidade, dependência química e situação de rua.
               <br/><br/>
-              Desde a nossa fundação, temos atuado de forma contínua na promoção da dignidade humana, já tendo realizado mais de 40.000 atendimentos e impactado diretamente milhares de vidas e famílias na região amazônica.
+              Desde a nossa fundação, temos atuado de forma contínua na promoção da dignidade humana, já tendo realizado mais de 40.000 atendimentos e impactado diretamente milhares de vidas e famílias no estado do Amazonas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in animation-delay-300">
               <Link href="/contato" className="inline-flex items-center justify-center px-8 py-4 bg-accent hover:bg-accent-light text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:-translate-y-1">
