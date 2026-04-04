@@ -93,7 +93,7 @@ export default async function NoticiasPage() {
     news = posts
       .filter(isFullPage)
       .map(mapPost)
-      .filter((n): n is NoticiasItem => n !== null);
+      .filter((n: NoticiasItem | null): n is NoticiasItem => n !== null);
   } catch (err) {
     console.error("[Notion] Erro ao buscar notícias:", err);
     // Em caso de falha, exibe a listagem vazia sem quebrar a página
