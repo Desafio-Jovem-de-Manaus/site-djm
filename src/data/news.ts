@@ -126,24 +126,5 @@ export const allNews: NewsItem[] = [
     mainImage: "/images/noticias/placeholder.jpg",
     galleryImages: [],
   },
-  {
-    slug: "titulo-honorario-aleam-2023",
-    title: "Ouro Político Honorário: Desafio Jovem pisa firme na glória e carrega gigantesca estátua honrosa lavrada das mãos parlamentares da grande Assembleia ALEAM",
-    date: "jun/2023",
-    category: "Institucional",
-    resume: "Mais do que mera medalha legislativa lustrada no ombro de seus diretores perante o alto congresso estadual dos deputados votantes; a placa certifica todo doador fiel civil que o suor crivado tem o chancelo de ferro do Estado na lisura.",
-    content: [
-      "Em junho de 2023, o Desafio Jovem de Manaus recebeu o Título de Utilidade Pública Estadual da Assembleia Legislativa do Amazonas (ALEAM), em solenidade realizada no plenário da Casa durante sessão especial convocada para homenagear entidades do terceiro setor com atuação relevante no estado.",
-      "A honraria reconhece mais de quatro décadas de serviço ininterrupto à sociedade amazonense, com destaque para os programas de recuperação de dependentes químicos, acolhimento de pessoas em situação de rua e fortalecimento de vínculos familiares e comunitários.",
-      "O presidente da instituição, ao receber a placa, dedicou o reconhecimento aos voluntários, doadores e técnicos que sustentam o trabalho diariamente. 'Este título não é nosso — é de cada pessoa que um dia nos estendeu a mão: com um recurso, um sorriso ou uma oração', afirmou durante o discurso.",
-      "O Título de Utilidade Pública abre portas para novos convênios com o governo estadual e facilita o acesso da instituição a editais públicos de financiamento. Do ponto de vista legal, também garante isenções tributárias e reconhecimento formal como parceira do Estado na execução de políticas sociais.",
-      "A honraria se soma a outras certificações já obtidas pela entidade, como o Certificado de Entidade Beneficente de Assistência Social (CEBAS) e o reconhecimento pela AGETAD como comunidade terapêutica habilitada para atendimento ao SUAS.",
-    ],
-    mainImage: "/images/noticias/placeholder.jpg",
-    galleryImages: [
-      "/images/noticias/placeholder-1.jpg",
-      "/images/noticias/placeholder-2.jpg",
-      "/images/noticias/placeholder-3.jpg",
-    ],
-  },
 ];
+
