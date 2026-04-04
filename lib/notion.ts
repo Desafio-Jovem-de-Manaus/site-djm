@@ -9,12 +9,6 @@ export const DATABASE_ID = process.env.NOTION_DATABASE_ID!;
 export async function getPublishedPosts() {
   const response = await (notion as any).databases.query({
     database_id: DATABASE_ID,
-    filter: {
-      property: "Status",
-      status: {
-        equals: "Concluído",
-      },
-    },
     sorts: [
       {
         property: "Data",
