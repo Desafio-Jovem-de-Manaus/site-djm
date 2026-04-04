@@ -2,21 +2,12 @@
 
 import { useState } from "react";
 import NewsCard from "@/components/NewsCard";
-import CTASection from "@/components/CTASection";
 import SocialCard from "@/components/SocialCard";
 import { socialAccounts } from "@/components/InstagramSection";
+import { allNews } from "@/data/news";
 import { Newspaper, FilterX, Hash } from "lucide-react";
 
 export default function NoticiasPage() {
-  const allNews = [
-    { title: "Projeto Braços Abertos realiza 5 Ações de Cidadania em 2024 atendendo incríveis 337 pessoas desabrigadas da chuva", date: "dez/2024", category: "Ações Sociais", resume: "Balanço massivo que ressalta o vigor extremo das kombis noturnas retirando da fila da fome e do abandono clínico quase quatro centenas de almas só na pequena fatia urbana Central da feira da Panair." },
-    { title: "GAF encerra duro calendário de 2024 acumulando o atendimento socorrista de 237 familiares carentes atadas em longas 12 reuniões", date: "dez/2024", category: "Institucional", resume: "A vitória e choro de finalização deste majestoso relatório consolida que curar a ferida química do homem amarrado não substitui fechar o luto sangrante das costas das famílias e filhos em risco." },
-    { title: "Comunidade 'Eco Eficiente' levanta massiva e colossal festa de doações injetando felicidade do Dia das Crianças direto nas veias de 70 pequeninos do entorno", date: "out/2024", category: "Eventos", resume: "Engrenar e injetar diversão num bairro crivado pela desassistência infantil com doces gratuitos doados e brincadeiras lúdicas monitoradas criam escudos maciços a prova do assédio precoce pelo crime do tráfico infantil." },
-    { title: "Guerra do Setembro Amarelo: Cúpula executa pesadas ações contínuas verbais de prevenção frontal ao suícidio em esgoto nas ruas escuras da capital", date: "set/2024", category: "Campanhas", resume: "Rastreamos pontes sombrias e as marginais dos leitos dos igarapés injetando fôlego nos abandonados estagnados que estavam à beira do rompimento das correntes definitivas de vida por amarra do próprio punho armado." },
-    { title: "Ouro Político Honorário: Desafio Jovem pisa firme na glória e carrega gigantesca estátua honrosa lavrada das mãos parlamentares da grande Assembleia ALEAM", date: "jun/2023", category: "Institucional", resume: "Mais do que mera medalha legislativa lustrada no ombro de seus diretores perante o alto congresso estadual dos deputados votantes; a placa certifica todo doador fiel civil que o suor crivado tem o chancelo de ferro do Estado na lisura." },
-    { title: "Força Tarefa 'Braços' estaciona Kombis e mergulha horas atentas ouvindo painéis do letal 1º Seminário Cível de Combate e Enfrentamento frontal à Exploração Sexual Infantojuvenil amazonense", date: "mai/2024", category: "Eventos", resume: "Treinar tropas psicossociais perante comissões civís investigativas contra as raízes da exploração dos miúdos e resgatá-los inteiramente dos lençóis macabros geridos violentamente que infestam a calada da noite no comércio ilícito do porto." },
-  ];
-
   const categories = ["Todos", "Ações Sociais", "Eventos", "Institucional", "Campanhas"];
   
   const [activeFilter, setActiveFilter] = useState("Todos");
@@ -78,6 +69,7 @@ export default function NoticiasPage() {
                   {filteredNews.map((n, i) => (
                     <NewsCard
                       key={i}
+                      slug={n.slug}
                       title={n.title}
                       date={n.date}
                       category={n.category}
@@ -111,9 +103,6 @@ export default function NoticiasPage() {
           
         </div>
       </section>
-
-      {/* Roda-Pé Fixo CTA */}
-      <CTASection title="Fique maravilhado na raiz com nosso balanço." subtitle="Viu os impactos acima que sua pequena doação faria na história manauara do pó urbano amanhã?" bg="bg-primary-dark" />
 
     </div>
   );

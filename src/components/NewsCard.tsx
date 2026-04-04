@@ -2,13 +2,14 @@ import { Calendar, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 interface NewsCardProps {
+  slug: string;
   date: string;
   category: string;
   title: string;
   resume?: string;
 }
 
-export default function NewsCard({ date, category, title, resume }: NewsCardProps) {
+export default function NewsCard({ slug, date, category, title, resume }: NewsCardProps) {
   // Configuração rápida de Cores por TAG pra evitar um design monótono
   const getCategoryColor = (cat: string) => {
     switch (cat.toLowerCase()) {
@@ -21,7 +22,7 @@ export default function NewsCard({ date, category, title, resume }: NewsCardProp
   };
 
   return (
-    <div className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl hover:border-primary/50 transition-all duration-300 group flex flex-col h-full hover:-translate-y-2 cursor-pointer">
+    <div className="relative bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl hover:border-primary/50 transition-all duration-300 group flex flex-col h-full hover:-translate-y-2 cursor-pointer">
       
       {/* Imagem Placeholder */}
       <div className="aspect-[4/3] bg-slate-100 relative overflow-hidden flex flex-col items-center justify-center text-slate-400 group-hover:bg-slate-200 transition-colors">
@@ -57,7 +58,7 @@ export default function NewsCard({ date, category, title, resume }: NewsCardProp
         
         {/* Botão de Ler Tudo caindo pra base */}
         <div className="mt-auto border-t border-slate-100 pt-5 mt-5">
-           <Link href="/noticias" className="flex items-center text-primary font-bold text-sm tracking-widest uppercase hover:text-primary-dark transition-colors group-hover:tracking-[0.2em]">
+           <Link href={`/noticias/${slug}`} className="flex items-center text-primary font-bold text-sm tracking-widest uppercase hover:text-primary-dark transition-colors group-hover:tracking-[0.2em] after:absolute after:inset-0">
              Ler Matéria Oficial <ChevronRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
            </Link>
         </div>
