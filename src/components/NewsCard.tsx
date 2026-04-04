@@ -58,7 +58,11 @@ export default function NewsCard({ slug, date, category, title, resume }: NewsCa
         
         {/* Botão de Ler Tudo caindo pra base */}
         <div className="mt-auto border-t border-slate-100 pt-5 mt-5">
-           <Link href={`/noticias/${slug}`} className="flex items-center text-primary font-bold text-sm tracking-widest uppercase hover:text-primary-dark transition-colors group-hover:tracking-[0.2em] after:absolute after:inset-0">
+           <Link 
+             href={slug.startsWith('http') ? slug : `/noticias/${slug}`}
+             target={slug.startsWith('http') ? "_blank" : undefined}
+             className="flex items-center text-primary font-bold text-sm tracking-widest uppercase hover:text-primary-dark transition-colors group-hover:tracking-[0.2em] after:absolute after:inset-0"
+           >
              Ler Matéria Oficial <ChevronRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
            </Link>
         </div>
