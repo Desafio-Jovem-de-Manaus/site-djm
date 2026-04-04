@@ -3,6 +3,8 @@
 import { useState } from "react";
 import NewsCard from "@/components/NewsCard";
 import CTASection from "@/components/CTASection";
+import SocialCard from "@/components/SocialCard";
+import { socialAccounts } from "@/components/InstagramSection";
 import { Newspaper, FilterX, Hash } from "lucide-react";
 
 export default function NoticiasPage() {
@@ -66,25 +68,39 @@ export default function NoticiasPage() {
              </div>
           </div>
 
-          {/* O Mar das Notícias Injetadas */}
-          {filteredNews.length > 0 ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredNews.map((n, i) => (
-                <NewsCard 
-                  key={i}
-                  title={n.title}
-                  date={n.date}
-                  category={n.category}
-                  resume={n.resume}
-                />
+          {/* Layout flex: grid de notícias + sidebar */}
+          <div className="flex gap-6 items-start">
+
+            {/* Área principal — notícias */}
+            <div className="flex-1 min-w-0">
+              {filteredNews.length > 0 ? (
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {filteredNews.map((n, i) => (
+                    <NewsCard
+                      key={i}
+                      title={n.title}
+                      date={n.date}
+                      category={n.category}
+                      resume={n.resume}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div className="bg-slate-100/50 border-2 border-dashed border-slate-300 rounded-3xl p-20 flex flex-col items-center justify-center text-slate-400">
+                   <FilterX className="w-16 h-16 mb-4" />
+                   <p className="font-bold text-lg text-slate-500">Nenhum marco achado nesse filtro denso de buscas. Volte ou procure mais fundo por lá!</p>
+                </div>
+              )}
+            </div>
+
+            {/* Sidebar redes sociais */}
+            <aside className="hidden lg:block w-[280px] shrink-0 sticky top-24 space-y-4">
+              {socialAccounts.map((account) => (
+                <SocialCard key={account.id} account={account} />
               ))}
-            </div>
-          ) : (
-            <div className="bg-slate-100/50 border-2 border-dashed border-slate-300 rounded-3xl p-20 flex flex-col items-center justify-center text-slate-400">
-               <FilterX className="w-16 h-16 mb-4" />
-               <p className="font-bold text-lg text-slate-500">Nenhum marco achado nesse filtro denso de buscas. Volte ou procure mais fundo por lá!</p>
-            </div>
-          )}
+            </aside>
+
+          </div>
 
           {/* Aviso Fixado Cível do Final da Grade */}
           <div className="mt-16 text-center">
