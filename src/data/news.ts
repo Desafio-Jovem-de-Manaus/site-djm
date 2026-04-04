@@ -117,13 +117,22 @@ export const allNews: NewsItem[] = [
     ],
   },
   {
-    slug: "https://www.cmm.am.gov.br/em-tribuna-popular-dr-daniel-destaca-trabalho-realizado-pelo-desafio-jovem-em-manaus/",
+    slug: "desafio-jovem-tribuna-popular-camara-manaus",
     title: "Desafio Jovem é tema de Tribuna Popular na Câmara Municipal de Manaus",
     date: "nov/2023",
     category: "Institucional",
     resume: "O trabalho do Desafio Jovem de Manaus foi reconhecido em Tribuna Popular na Câmara Municipal de Manaus. O evento reuniu acolhidos e a diretoria da instituição para apresentar à sociedade os serviços oferecidos há 42 anos na cidade.",
-    content: [],
-    mainImage: "/images/noticias/placeholder.jpg",
+    content: [
+      "O Desafio Jovem de Manaus foi tema de uma Tribuna Popular realizada na Câmara Municipal de Manaus (CMM), no Plenário Adriano Jorge. O evento, presidido pelo vereador Dr. Daniel Vasconcelos (Podemos), reuniu acolhidos, lideranças e membros da diretoria da instituição, com o tema: \"Desafio Jovem de Manaus: de braços abertos para atender os invisíveis em situação de rua\".",
+      "O parlamentar, que preside a Comissão de Direitos Humanos, Povos Indígenas e Minorias da CMM, destacou o papel fundamental das organizações da sociedade civil no atendimento à população vulnerável:",
+      "\"As Organizações da Sociedade Civil fazem um trabalho invisível e muitas das vezes chegam aonde o poder público não chega, como é o caso do Desafio Jovem Manaus, que traz dignidade, com abordagem social e acolhimento aos mais vulneráveis.\" — Dr. Daniel Vasconcelos, vereador (Podemos)",
+      "Com 42 anos de atuação em Manaus, o Desafio Jovem é uma instituição não governamental de abrangência nacional, com missão voltada ao cuidado integral do ser humano. Ao longo de sua trajetória na cidade, a organização atendeu cerca de 14 mil pessoas, atuando no resgate de jovens em situação de rua e no processo de ressocialização. Além do trabalho terapêutico, a instituição oferece cursos de alfabetização e capacitação profissional.",
+      "A diretora executiva da entidade, Josani Pirangy, ressaltou a importância do espaço para ampliar o reconhecimento do trabalho realizado:",
+      "\"Esse momento aqui na Câmara é extremamente importante para que os parlamentares e a população conheçam o Desafio Jovem e os serviços que ofertamos. Esperamos ter cada vez mais apoio para continuar contribuindo com a nossa cidade.\" — Josani Pirangy, diretora executiva",
+      "O Desafio Jovem integra a Rede de Atenção Psicossocial (RAPS), sendo um dos pontos de cuidado reconhecidos pelo Sistema Único de Saúde (SUS) em Manaus. Ao final do evento, os vereadores Allan Campelo, Kennedy Marques, Marcel Alexandre, Rodrigo Guedes e Sassá da Construção Civil manifestaram interesse em contribuir com a instituição por meio de Emenda Parlamentar Coletiva.",
+      "Fonte: Câmara Municipal de Manaus — Assessoria de Comunicação do Vereador Dr. Daniel Vasconcelos. Disponível em: https://www.cmm.am.gov.br/em-tribuna-popular-dr-daniel-destaca-trabalho-realizado-pelo-desafio-jovem-em-manaus/"
+    ],
+    mainImage: "/Noticias-Tribuna-Popular-na-Camara-Municipal-de-Manaus-2023.png",
     galleryImages: [],
   },
 ];
