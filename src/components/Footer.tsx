@@ -77,7 +77,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-6 flex items-center border-l-4 border-highlight pl-3 bg-primary/50 py-1 shadow-sm">Contato</h3>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-accent-light flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-[#FFEF00] flex-shrink-0 mt-0.5" />
                 <span className="text-blue-100 text-sm font-medium">
                   Rua Fragata, 100 — Conj. Jardim Petrópolis<br />
                   Bairro Petrópolis — Manaus/AM<br />
@@ -85,7 +85,7 @@ export default function Footer() {
                 </span>
               </li>
               <li className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-accent-light flex-shrink-0 mt-0.5" />
+                <Phone className="w-5 h-5 text-[#FFEF00] flex-shrink-0 mt-0.5" />
                 <span className="text-blue-100 text-sm font-medium flex flex-col gap-1">
                   <span>(92) 3304-7704</span>
                   <span>(92) 98412-4324 / 98160-1574 (Whats)</span>
@@ -93,11 +93,11 @@ export default function Footer() {
                 </span>
               </li>
               <li className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-accent-light flex-shrink-0" />
+                <Mail className="w-5 h-5 text-[#FFEF00] flex-shrink-0" />
                 <span className="text-blue-100 text-sm font-medium">desafiojovemmanaus@gmail.com</span>
               </li>
               <li className="flex items-start space-x-3">
-                <Clock className="w-5 h-5 text-accent-light flex-shrink-0 mt-0.5" />
+                <Clock className="w-5 h-5 text-[#FFEF00] flex-shrink-0 mt-0.5" />
                 <span className="text-blue-100 text-sm font-medium flex flex-col gap-1">
                   <span>Administrativo: Seg a Sex, 8h às 17h</span>
                   <span>Público Externo: Seg a Sex, 9h às 16h</span>

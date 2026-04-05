@@ -88,7 +88,7 @@ export default function Navbar() {
               const Content = () => (
                 <span className={`flex items-center transition-colors duration-200 ${
                   item.isButton 
-                    ? "px-5 py-2.5 bg-accent text-white hover:bg-accent-light rounded-lg font-bold"
+                    ? "px-5 py-2.5 bg-[#30449C] text-white hover:bg-[#222F6D] rounded-lg font-bold"
                     : "text-primary-dark hover:text-primary font-medium"
                 }`}>
                   {item.name}
@@ -127,6 +127,11 @@ export default function Navbar() {
                 </div>
               );
             })}
+            <div className="h-full flex items-center px-1 lg:px-3 ml-2 lg:ml-0">
+              <Link href="/contato" className="flex items-center px-5 py-2.5 bg-[#DE4A19] text-white hover:bg-[#E67310] rounded-lg font-bold transition-colors duration-200">
+                Precisa de Ajuda?
+              </Link>
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -154,7 +159,7 @@ export default function Navbar() {
                         href={item.href}
                         onClick={() => setIsOpen(false)}
                         className={`flex-1 py-3 text-lg font-semibold ${
-                          item.isButton ? "text-accent" : "text-primary-dark"
+                          item.isButton ? "text-[#30449C]" : "text-primary-dark"
                         }`}
                       >
                         {item.name}
@@ -190,6 +195,15 @@ export default function Navbar() {
                 </div>
               );
             })}
+            <div className="pt-4 pb-2 border-t border-slate-100 mt-2">
+              <Link
+                href="/contato"
+                onClick={() => setIsOpen(false)}
+                className="flex w-full items-center justify-center px-5 py-3 bg-[#DE4A19] text-white hover:bg-[#E67310] rounded-lg font-bold transition-colors duration-200"
+              >
+                Precisa de Ajuda?
+              </Link>
+            </div>
           </div>
         </div>
       )}
