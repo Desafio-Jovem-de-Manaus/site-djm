@@ -32,6 +32,7 @@ const navigation: NavItem[] = [
     subItems: [
       { name: "Dependência química", href: "/dep-quimica" },
       { name: "Assistência social", href: "/social" },
+      { name: "Notícias e Eventos", href: "/noticias" },
     ],
   },
   {

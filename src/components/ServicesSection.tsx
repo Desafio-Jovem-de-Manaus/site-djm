@@ -7,21 +7,27 @@ export default function ServicesSection() {
     <section id="servicos" className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+        <div className="text-center mb-16 max-w-3xl mx-auto flex flex-col items-center">
           <h2 className="text-4xl md:text-5xl font-bold text-primary-dark mb-6">Serviços Institucionais</h2>
-          <p className="text-xl text-slate-600">
+          <p className="text-xl text-slate-600 mb-8">
             Quatro frentes de atuação voltadas à transformação social e ao desenvolvimento humano
           </p>
+          <Link 
+            href="/o-que-fazemos" 
+            className="inline-flex items-center px-6 py-3 bg-white border border-slate-200 text-slate-700 font-semibold rounded-xl hover:bg-slate-50 transition-colors shadow-sm group"
+          >
+            Ver todos os serviços
+            <ArrowRight className="w-5 h-5 ml-2 text-primary group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           
           {/* Card 1: Comunidade Terapêutica */}
           <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100 flex flex-col group hover:-translate-y-2 transition-transform duration-300">
-            <div className="h-[400px] bg-purple-900 flex items-center justify-center relative">
-              <ImageIcon className="w-10 h-10 text-white/30 absolute" />
-              <span className="text-white/60 font-medium z-10">[ Foto Comunidade Terapêutica ]</span>
-              <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+            <div className="h-[400px] bg-purple-900 flex items-center justify-center relative overflow-hidden">
+              <img src="/home-servicos-institucionais-ct.png" alt="Comunidade Terapêutica" className="absolute inset-0 w-full h-full object-cover z-0" loading="lazy" />
+              <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-900/80 to-transparent z-10"></div>
             </div>
             <div className="p-8 flex-grow flex flex-col border-t-4 border-purple-700">
               <div className="text-purple-700 font-bold tracking-wider text-sm mb-2 uppercase">Comunidade Terapêutica</div>
@@ -62,10 +68,9 @@ export default function ServicesSection() {
 
           {/* Card 2: Abrigo Institucional */}
           <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100 flex flex-col group hover:-translate-y-2 transition-transform duration-300">
-            <div className="h-[400px] bg-blue-800 flex items-center justify-center relative">
-              <ImageIcon className="w-10 h-10 text-white/30 absolute" />
-              <span className="text-white/60 font-medium z-10">[ Foto Abrigo Institucional ]</span>
-              <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+            <div className="h-[400px] bg-blue-800 flex items-center justify-center relative overflow-hidden">
+              <img src="/home-servicos-institucionais-abrigo.png" alt="Abrigo Institucional" className="absolute inset-0 w-full h-full object-cover z-0" loading="lazy" />
+              <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-900/80 to-transparent z-10"></div>
             </div>
             <div className="p-8 flex-grow flex flex-col border-t-4 border-blue-600">
               <div className="text-blue-700 font-bold tracking-wider text-sm mb-2 uppercase">Abrigo Institucional</div>
@@ -103,10 +108,9 @@ export default function ServicesSection() {
 
           {/* Card 3: Abordagem Social */}
           <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100 flex flex-col group hover:-translate-y-2 transition-transform duration-300">
-            <div className="h-[400px] bg-orange-600 flex items-center justify-center relative">
-              <ImageIcon className="w-10 h-10 text-white/30 absolute" />
-              <span className="text-white/60 font-medium z-10">[ Foto Abordagem Social ]</span>
-              <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+            <div className="h-[400px] bg-orange-600 flex items-center justify-center relative overflow-hidden">
+              <img src="/home-servicos-institucionais-abordagem.png" alt="Abordagem Social" className="absolute inset-0 w-full h-full object-cover z-0" loading="lazy" />
+              <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-900/80 to-transparent z-10"></div>
             </div>
             <div className="p-8 flex-grow flex flex-col border-t-4 border-orange-500">
               <div className="text-orange-600 font-bold tracking-wider text-sm mb-2 uppercase">Abordagem Social</div>
@@ -146,7 +150,7 @@ export default function ServicesSection() {
           {/* Card 4: Comunidade Eficiente */}
           <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100 flex flex-col group hover:-translate-y-2 transition-transform duration-300">
             <div className="h-[400px] bg-primary flex items-center justify-center relative overflow-hidden">
-              <img src="/Comunidade%20Eficiente%20-%201.png" alt="Comunidade Eficiente" className="absolute inset-0 w-full h-full object-cover z-0" loading="lazy" />
+              <img src="/home-servicos-institucionais-comef.png" alt="Comunidade Eficiente" className="absolute inset-0 w-full h-full object-cover z-0" loading="lazy" />
               <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-900/80 to-transparent z-10"></div>
             </div>
             <div className="p-8 flex-grow flex flex-col border-t-4 border-primary">

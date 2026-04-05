@@ -1,4 +1,4 @@
-import { Instagram } from "lucide-react";
+import { Instagram, Facebook } from "lucide-react";
 import SocialCard, { SocialAccount } from "./SocialCard";
 
 export const socialAccounts: SocialAccount[] = [
@@ -52,8 +52,13 @@ export default function InstagramSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center mb-16">
-          <div className="w-16 h-16 bg-gradient-to-tr from-orange-400 via-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white shadow-lg shadow-pink-500/20">
-            <Instagram className="w-8 h-8" />
+          <div className="flex justify-center items-center gap-4 mb-6">
+            <div className="w-16 h-16 bg-gradient-to-tr from-orange-400 via-pink-500 to-purple-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-pink-500/20">
+              <Instagram className="w-8 h-8" />
+            </div>
+            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-500/20">
+              <Facebook className="w-8 h-8" fill="currentColor" />
+            </div>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-primary-dark mb-4">Acompanhe nossas atividades</h2>
           <p className="text-xl text-slate-600">Fique por dentro do dia a dia da instituição em nossas redes sociais oficiais.</p>
