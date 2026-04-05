@@ -13,9 +13,9 @@ export default function Footer() {
             <div className="mb-6">
               <Link href="/" className="inline-block">
                 <img 
-                  src="/logo.png" 
+                  src="/Logo-Desafio-Branco.png" 
                   alt="Desafio Jovem de Manaus" 
-                  className="h-20 w-auto object-contain bg-white rounded-xl p-3 shadow-md"
+                  className="h-20 w-auto object-contain drop-shadow-sm"
                 />
               </Link>
             </div>

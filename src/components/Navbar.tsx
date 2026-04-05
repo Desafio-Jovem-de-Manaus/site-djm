@@ -76,9 +76,9 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0">
             <img 
-              src="/logo.png" 
+              src="/Logo-Desafio-Azul.png" 
               alt="Desafio Jovem de Manaus" 
-              className="h-14 w-auto object-contain drop-shadow-sm" 
+              className="h-16 w-auto object-contain drop-shadow-sm" 
             />
           </Link>
 
