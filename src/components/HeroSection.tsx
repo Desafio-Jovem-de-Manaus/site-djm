@@ -100,14 +100,18 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="w-full aspect-video rounded-2xl overflow-hidden border-4 border-primary/50 shadow-2xl relative bg-primary/40 flex items-center justify-center animate-fade-in animation-delay-400 group cursor-pointer hover:border-highlight transition-colors">
-            <div className="text-center p-6 transition-transform group-hover:scale-105">
-              <div className="w-20 h-20 bg-red-600/20 text-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <PlayCircle className="w-10 h-10" />
-              </div>
-              <p className="text-slate-300 font-medium text-lg">Vídeo institucional</p>
-              <p className="text-slate-500 text-sm mt-1">(adicionar link do YouTube)</p>
-            </div>
+          <div className="w-full aspect-video rounded-2xl overflow-hidden border-4 border-primary/50 shadow-2xl relative bg-black flex items-center justify-center animate-fade-in animation-delay-400">
+            <iframe 
+              width="100%" 
+              height="100%" 
+              src="https://www.youtube.com/embed/VP5ZThcbB_Q?rel=0" 
+              title="Vídeo Institucional Desafio Jovem de Manaus" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            ></iframe>
           </div>
           
         </div>

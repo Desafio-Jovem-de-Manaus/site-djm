@@ -3,16 +3,17 @@ import { ArrowRight } from "lucide-react";
 
 export default function PartnersCarousel() {
   const partners = [
-    "SEAS (Secr. de Estado de Assistência Social)",
-    "VEMEPA (Vara de Execuções de Penas Alternativas)",
-    "Programa Mesa Brasil — SESC",
-    "SEPROR (Secretaria de Produção Rural)",
-    "Bodega do Pão",
-    "Mikitos",
-    "Sociedade Bíblica do Brasil",
-    "DEPAD (Dep. de Entidades de Apoio)",
-    "SEAP (Secr. de Administração Penitenciária)",
-    "Global Teen Challenge"
+    { name: "Bodega do Pão", image: "/Parceiros-Logo-Empresariais-Bodega-do-Pao.png" },
+    { name: "Casa Queiroz Refrigeração", image: "/Parceiros-Logo-Empresariais-Casa-Queiroz.png" },
+    { name: "Mikito's", image: "/Parceiros-Logo-Empresariais-Mikitos.png" },
+    { name: "Virrosas", image: "/Parceiros-Logo-Empresariais-Virrosas.png" },
+    { name: "SESC Mesa Brasil", image: "/Parceiros-Logo-Institucional-Mesa-Brasil.png" },
+    { name: "Rede Acolher", image: "/Parceiros-Logo-Institucional-Rede-Acolher.png" },
+    { name: "SOMAP", image: "/Parceiros-Logo-Institucional-Somap.jpg" },
+    { name: "Sociedade Bíblica do Brasil", image: "/Parceiros-Logo-Institucional-SBB.png" },
+    { name: "Global Teen Challenge", image: "/Parceiros-Logo-Institucional-Global-Teen-Challenge.png" },
+    { name: "Desafio Jovem do Brasil", image: "/Parceiros-Logo-Institucional-Desafio-Jovem-do-Brasil.png" },
+    { name: "Rede Recomeçar", image: "/Parceiros-Logo-Rede-Institucional-Recomecar-Amazonas1.png" },
   ];
 
   return (
@@ -28,10 +29,11 @@ export default function PartnersCarousel() {
           {[...partners, ...partners].map((partner, index) => (
             <div
               key={index}
-              className="w-72 h-32 bg-white border border-slate-200 rounded-2xl flex items-center justify-center shadow-sm hover:shadow-md transition-shadow cursor-default group"
+              className="w-72 h-32 bg-white border border-slate-200 rounded-2xl flex flex-col items-center justify-center p-4 shadow-sm hover:shadow-md transition-shadow cursor-default group"
             >
-               <span className="text-slate-400 font-semibold text-center px-4 group-hover:text-primary transition-colors whitespace-break-spaces text-sm leading-tight">
-                 {partner}
+               <img src={partner.image} alt={partner.name} className="w-full h-14 object-contain mb-2 group-hover:scale-105 transition-transform duration-300" />
+               <span className="text-slate-400 font-semibold text-center group-hover:text-primary transition-colors whitespace-break-spaces text-xs md:text-sm leading-tight line-clamp-1 w-full max-w-[90%]">
+                 {partner.name}
                </span>
             </div>
           ))}

@@ -9,56 +9,70 @@ export default function ParceirosPage() {
   ];
 
   const governamentais = [
-    { title: "DEPAD", desc: "Órgão parceiro de atuação Federal." },
-    { title: "MDS", desc: "Órgão parceiro de atuação Federal." },
-    { title: "SEAS", desc: "Responsável master pelos Termos de Fomento e amparo orçamentário do Abrigo." },
-    { title: "FPS", desc: "Órgão parceiro de atuação Estadual (Amazonas)." },
-    { title: "SEJUSC", desc: "Órgão parceiro de atuação Estadual (Amazonas)." },
-    { title: "SEAP", desc: "Suporte na regularização criminal e judicial dos encarcerados abrigados em triagem civil progressiva." },
-    { title: "ADS", desc: "Órgão parceiro de atuação Estadual (Amazonas)." },
-    { title: "SEPROR", desc: "Apoio produtivo que provê recursos para todos os braços de atuação vigentes." },
-    { title: "SEMASC", desc: "Órgão parceiro de atuação Municipal (Manaus)." },
-    { title: "SEMSA", desc: "Retaguarda gigante em Atendimento macro de saúde nas vias clínicas no polo físico raiz." },
-    { title: "SEMJEL", desc: "Órgão parceiro de atuação Municipal (Manaus)." },
-    { title: "FMS", desc: "Órgão parceiro de atuação Municipal (Manaus)." },
-    { title: "CEAS", desc: "Conselho Estadual parceiro." },
-    { title: "CONEN", desc: "Conselho Estadual parceiro." },
-    { title: "CIAMP", desc: "Comitê Municipal parceiro." },
-    { title: "COMAD", desc: "Conselho Municipal parceiro." },
-    { title: "CMAS", desc: "Conselho Municipal parceiro." },
-    { title: "VEMEPA", desc: "Repassador implacável das penas legais pecuniárias convertidas e doações prestacionais da Vara Comum." },
+    { title: "DEPAD", subtitle: "Departamento de Entidades de Apoio e Acolhimento Atuantes em Álcool e Drogas", image: "/Parceiros-Logo-Governamentais-Brasil.png" },
+    { title: "MDS", subtitle: "Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome", image: "/Parceiros-Logo-Governamentais-Brasil.png" },
+    { title: "SEAS", subtitle: "Secretaria de Estado de Assistência Social e Combate à Fome", image: "/Parceiros-Logo-Governamentais-Amazonas.png" },
+    { title: "FPS", subtitle: "Fundo de Promoção Social e Erradicação da Pobreza", image: "/Parceiros-Logo-Governamentais-Amazonas.png" },
+    { title: "SEJUSC", subtitle: "Secretaria de Estado de Justiça, Direitos Humanos e Cidadania", image: "/Parceiros-Logo-Governamentais-Amazonas.png" },
+    { title: "SEAP", subtitle: "Secretaria de Estado de Administração Penitenciária", image: "/Parceiros-Logo-Governamentais-Amazonas.png" },
+    { title: "ADS", subtitle: "Agência de Desenvolvimento Sustentável do Amazonas", image: "/Parceiros-Logo-Governamentais-Amazonas.png" },
+    { title: "SEPROR", subtitle: "Secretaria de Estado de Produção Rural", image: "/Parceiros-Logo-Governamentais-Amazonas.png" },
+    { title: "SEMASC", subtitle: "Secretaria Municipal da Mulher, Assistência Social e Cidadania", image: "/Parceiros-Logo-Governamentais-Manaus.png" },
+    { title: "SEMSA", subtitle: "Secretaria Municipal de Saúde", image: "/Parceiros-Logo-Governamentais-Manaus.png" },
+    { title: "SEMJEL", subtitle: "Secretaria Municipal de Juventude, Esporte e Lazer", image: "/Parceiros-Logo-Governamentais-Manaus.png" },
+    { title: "FMS", subtitle: "Fundo Manaus Solidária", image: "/Parceiros-Logo-Governamentais-Manaus.png" },
+    { title: "CEAS", subtitle: "Conselho Estadual de Assistência Social", image: "/Parceiros-Logo-Conselho-CEAS.png" },
+    { title: "CIAMP", subtitle: "Comitê Intersetorial de Acompanhamento e Monitoramento da Política Municipal para a População em Situação de Rua", image: "/Parceiros-Logo-Governamentais-Manaus.png" },
+    { title: "COMAD", subtitle: "Conselho Municipal de Políticas sobre Drogas", image: "/Parceiros-Logo-Conselho-COMAD.png" },
+    { title: "CMAS", subtitle: "Conselho Municipal de Assistência Social", image: "/Parceiros-Logo-Governamentais-Manaus.png" },
+    { title: "VEMEPA", subtitle: "Vara de Execuções de Medidas e Penas Alternativas", image: "/Parceiros-Logo-Governamentais-TJAM.png" },
   ];
 
   const empresariais = [
-    { title: "Bodega do Pão", desc: "Fábrica e doação limpa diuturna de pães fresquinhos assados para alimentar os famintos de rua." },
-    { title: "Casa Queiroz Refrigeração", desc: "Parceiro do setor empresarial." },
-    { title: "Virrosas", desc: "Parceiro do setor empresarial." },
-    { title: "Mikito's", desc: "A indústria implaca doações e entregas massivas recorrentes e fixas enchendo as cestas básicas cruas." },
+    { title: "Bodega do Pão", desc: "Parceiro na doação de gêneros alimentícios.", url: "https://bodegadopao.com.br/", image: "/Parceiros-Logo-Empresariais-Bodega-do-Pao.png" },
+    { title: "Casa Queiroz Refrigeração", desc: "Parceiro na prestação de serviços.", url: "https://www.casaqueiroz.com.br/", image: "/Parceiros-Logo-Empresariais-Casa-Queiroz.png" },
+    { title: "Virrosas", desc: "Parceiro na doação de gêneros alimentícios.", url: "https://virrosas.com.br/", image: "/Parceiros-Logo-Empresariais-Virrosas.png" },
+    { title: "Mikito's", desc: "Parceiro na doação de gêneros alimentícios.", url: "https://api.mikitos.com.br/", image: "/Parceiros-Logo-Empresariais-Mikitos.png" },
   ];
 
   const institucionais = [
-    { title: "Sesc Mesa Brasil", desc: "Parceria titânica presente em absolutamente todos os pátios alimentícios da filial." },
-    { title: "Rede Acolher", desc: "Parceiro do setor institucional." },
-    { title: "SOMAP", desc: "Estrutura doou espaço de quadra fechada climatizada inteira pra suor corporativo esportivo." },
-    { title: "Sociedade Bíblica do Brasil SBB", desc: "Imprimidora e enviadora implacável das literaturas teológicas e papel impresso nas ruas." },
-    { title: "Global Teen Challenge", desc: "A cabeça matriz central Norte-Americana detentora da tecnologia espiritual global empregada e filiada." },
-    { title: "Desafio Jovem do Brasil", desc: "Parceiro do setor institucional." },
-    { title: "Rede Recomeçar", desc: "Parceiro do setor institucional." },
+    { title: "Sesc Mesa Brasil", desc: "Doação de gêneros alimentícios.", image: "/Parceiros-Logo-Institucional-Mesa-Brasil.png" },
+    { title: "Rede Acolher", desc: "Representação institucional e apoio nas ações e projetos.", image: "/Parceiros-Logo-Institucional-Rede-Acolher.png" },
+    { title: "SOMAP", desc: "Cessão do espaço institucional para realização de projetos.", image: "/Parceiros-Logo-Institucional-Somap.jpg" },
+    { title: "Sociedade Bíblica do Brasil SBB", desc: "Doação de literaturas.", image: "/Parceiros-Logo-Institucional-SBB.png" },
+    { title: "Global Teen Challenge", desc: "Representação institucional, treinamentos e apoio nos projetos.", image: "/Parceiros-Logo-Institucional-Global-Teen-Challenge.png" },
+    { title: "Desafio Jovem do Brasil", desc: "Representação institucional, treinamentos e apoio nos projetos.", image: "/Parceiros-Logo-Institucional-Desafio-Jovem-do-Brasil.png" },
+    { title: "Rede Recomeçar", desc: "Representação institucional e apoio nas ações e projetos.", image: "/Parceiros-Logo-Rede-Institucional-Recomecar-Amazonas1.png" },
   ];
 
   // Renderizador genérico de listagem de parceiros
-  const ParceiroCard = ({ title, desc }: { title: string, desc: string }) => (
-    <div className="bg-slate-50 p-6 rounded-3xl border border-slate-200 shadow-sm flex items-center md:items-start group hover:-translate-y-1 hover:shadow-xl hover:bg-white hover:border-primary/50 transition-all cursor-crosshair">
+  const ParceiroCard = ({ title, desc, subtitle, image, url }: { title: string, desc?: string, subtitle?: string, image?: string, url?: string }) => {
+    const Content = (
+      <div className={`bg-slate-50 p-6 rounded-3xl border border-slate-200 shadow-sm flex items-center md:items-start group hover:-translate-y-1 hover:shadow-xl hover:bg-white hover:border-primary/50 transition-all h-full ${url ? 'cursor-pointer' : 'cursor-crosshair'}`}>
        <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white border border-slate-200 flex items-center justify-center flex-shrink-0 mr-5 group-hover:bg-slate-50 transition-colors shadow-inner overflow-hidden relative">
-         <ImageIcon className="w-8 h-8 text-slate-300 absolute" />
-         <span className="text-[9px] font-black uppercase text-slate-400 opacity-60 z-10 text-center tracking-widest leading-none p-1">[ Logo ]</span>
+         {image ? (
+           <img src={image} alt={title} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+         ) : (
+           <>
+             <ImageIcon className="w-8 h-8 text-slate-300 absolute" />
+             <span className="text-[9px] font-black uppercase text-slate-400 opacity-60 z-10 text-center tracking-widest leading-none p-1">[ Logo ]</span>
+           </>
+         )}
        </div>
        <div className="flex-1">
-         <h4 className="font-bold text-primary-dark text-lg md:text-xl tracking-tight mb-2 group-hover:text-primary transition-colors leading-tight">{title}</h4>
-         <p className="text-slate-500 font-medium text-xs md:text-sm leading-relaxed">{desc}</p>
+         <h4 className="font-bold text-primary-dark text-lg md:text-xl tracking-tight mb-1 group-hover:text-primary transition-colors leading-tight">{title}</h4>
+         {subtitle && <div className="text-sm text-gray-500 mb-2 leading-tight">{subtitle}</div>}
+         {desc && <p className="text-slate-500 font-medium text-xs md:text-sm leading-relaxed">{desc}</p>}
        </div>
-    </div>
-  );
+      </div>
+    );
+    
+    return url ? (
+      <a href={url} target="_blank" rel="noopener noreferrer" className="block outline-none h-full" title={`Acessar site de ${title}`}>
+        {Content}
+      </a>
+    ) : Content;
+  };
 
   return (
     <div className="flex flex-col min-h-screen pt-20 bg-slate-50">
@@ -71,9 +85,9 @@ export default function ParceirosPage() {
            </div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6">Nossos Parceiros</h1>
+          <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6">Nenhuma transformação acontece sozinha.</h1>
           <p className="text-2xl text-yellow-100 font-medium max-w-4xl mx-auto leading-relaxed">
-            As colunas de concreto estatais, empresários anônimos e igrejas incansáveis: Descubra e contemple que <strong className="text-yellow-400">Juntos nós somos Imbatíveis</strong>.
+            O trabalho do Desafio Jovem de Manaus é ampliado por uma rede de parceiros governamentais, empresariais e institucionais que acreditam que toda vida merece uma segunda chance. Conheça quem torna isso possível.
           </p>
         </div>
       </section>
@@ -97,12 +111,12 @@ export default function ParceirosPage() {
                   <h2 className="text-3xl font-black text-primary-dark tracking-tight flex items-center mb-4 border-b-2 border-slate-100 pb-4">
                     <Landmark className="w-8 h-8 text-blue-700 mr-4" /> Parceiros Governamentais
                   </h2>
-                  <p className="text-lg text-slate-500 font-medium max-w-3xl">A infinita base estrutural macro que regula as Secretarias vitais para o acolhimento burocrático e ampara legalmente nossas ações nas ruas.</p>
+                  <p className="text-lg text-slate-500 font-medium max-w-3xl">Onde o poder público precisa chegar e nem sempre consegue, o DJM está — reconhecido pelo Estado como parceiro estratégico na execução de serviços essenciais. Por meio de parcerias e termos de fomento, investem na nossa atuação como extensão das políticas públicas do Amazonas.</p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
                    {governamentais.map((item, idx) => (
-                     <ParceiroCard key={`gov-${idx}`} title={item.title} desc={item.desc} />
+                     <ParceiroCard key={`gov-${idx}`} title={item.title} subtitle={item.subtitle} image={item.image} />
                    ))}
                 </div>
               </section>
@@ -113,12 +127,12 @@ export default function ParceirosPage() {
                   <h2 className="text-3xl font-black text-primary-dark tracking-tight flex items-center mb-4 border-b-2 border-slate-100 pb-4">
                     <Briefcase className="w-8 h-8 text-primary mr-4" /> Parceiros Empresariais
                   </h2>
-                  <p className="text-lg text-slate-500 font-medium max-w-3xl">Os colossos donos de indústrias e engrenagens do comércio alimentício que não fecham os olhos para o lado invisível da sociedade e investem pesado em doações materiais e logísticas.</p>
+                  <p className="text-lg text-slate-500 font-medium max-w-3xl">São empresas que enxergam na parceria com o DJM uma forma direta de impactar a comunidade. Suas doações de alimentos, insumos e suporte operacional são parte essencial do funcionamento diário da organização.</p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
                    {empresariais.map((item, idx) => (
-                     <ParceiroCard key={`emp-${idx}`} title={item.title} desc={item.desc} />
+                     <ParceiroCard key={`emp-${idx}`} title={item.title} desc={item.desc} image={item.image} url={item.url} />
                    ))}
                 </div>
               </section>
@@ -129,12 +143,12 @@ export default function ParceirosPage() {
                   <h2 className="text-3xl font-black text-primary-dark tracking-tight flex items-center mb-4 border-b-2 border-slate-100 pb-4">
                     <Building2 className="w-8 h-8 text-purple-700 mr-4" /> Parceiros Institucionais & Sociedade Civil
                   </h2>
-                  <p className="text-lg text-slate-500 font-medium max-w-3xl">Desde fundações legislativas a conselhos religiosos gigantescos, a rede de apoio que alicerça o fortalecimento moral, jurídico e teológico das vidas resgatadas.</p>
+                  <p className="text-lg text-slate-500 font-medium max-w-3xl">Da sociedade civil ao terceiro setor, nossos parceiros institucionais representam a diversidade de quem acredita que é possível mudar realidades. Juntos, formamos uma rede que vai muito além de uma única organização.</p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
                    {institucionais.map((item, idx) => (
-                     <ParceiroCard key={`inst-${idx}`} title={item.title} desc={item.desc} />
+                     <ParceiroCard key={`inst-${idx}`} title={item.title} desc={item.desc} image={item.image} />
                    ))}
                 </div>
               </section>
