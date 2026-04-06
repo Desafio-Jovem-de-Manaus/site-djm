@@ -76,13 +76,16 @@ export default function ContactSection() {
                 <h4 className="text-xl font-bold text-primary-dark mb-2">Fale conosco</h4>
                 <div className="space-y-3">
                   <p className="text-slate-600 flex items-center leading-relaxed">
-                    <span className="font-bold w-32 pb-0.5 border-b border-slate-200 mr-2">Telefone Fixo:</span> (92) 3304-7704
+                    <span className="font-bold w-40 pb-0.5 border-b border-slate-200 mr-2 text-primary-dark">Telefone Fixo:</span> 
+                    <a href="tel:9233047704" className="hover:text-primary transition-colors">(92) 3304-7704</a>
                   </p>
                   <p className="text-slate-600 flex items-center leading-relaxed">
-                    <span className="font-bold w-32 pb-0.5 border-b border-slate-200 mr-2">Geral (Whats):</span> (92) 98412-4324 / 98160-1574
+                    <span className="font-bold w-40 pb-0.5 border-b border-slate-200 mr-2 text-primary-dark">WhatsApp Geral:</span> 
+                    <a href="https://wa.me/5592984446540" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">(92) 98444-6540</a>
                   </p>
                   <p className="text-slate-600 flex items-center leading-relaxed">
-                    <span className="font-bold w-32 pb-0.5 border-b border-slate-200 mr-2">Serviço Social:</span> (92) 98444-6540 / 98432-1699
+                    <span className="font-bold w-40 pb-0.5 border-b border-slate-200 mr-2 text-primary-dark">WhatsApp Acolhimento:</span> 
+                    <a href="https://wa.me/5592984321699" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">(92) 98432-1699</a>
                   </p>
                 </div>
               </div>
@@ -94,8 +97,8 @@ export default function ContactSection() {
               </div>
               <div className="pt-2">
                 <h4 className="text-xl font-bold text-primary-dark mb-2">E-mail corporativo</h4>
-                <a href="mailto:desafiojovemmanaus@gmail.com" className="text-primary font-bold hover:underline">
-                  desafiojovemmanaus@gmail.com
+                <a href="mailto:contato@desafiojovemmanaus.org.br" className="text-primary font-bold hover:underline">
+                  contato@desafiojovemmanaus.org.br
                 </a>
               </div>
             </div>

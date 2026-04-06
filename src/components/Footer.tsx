@@ -65,13 +65,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="text-blue-100 hover:text-highlight transition-colors font-medium">
-                  Perguntas Frequentes (FAQ)
+                <Link href="/contato" className="text-blue-100 hover:text-highlight transition-colors font-medium">
+                  Precisa de ajuda?
                 </Link>
               </li>
               <li>
-                <Link href="/contato" className="text-blue-100 hover:text-highlight transition-colors font-medium">
-                  Precisa de ajuda?
+                <Link href="/faq" className="text-blue-100 hover:text-highlight transition-colors font-medium">
+                  Perguntas Frequentes (FAQ)
                 </Link>
               </li>
             </ul>
@@ -91,15 +91,20 @@ export default function Footer() {
               </li>
               <li className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-[#FFEF00] flex-shrink-0 mt-0.5" />
-                <span className="text-blue-100 text-sm font-medium flex flex-col gap-1">
-                  <span>(92) 3304-7704 (Fixo)</span>
-                  <span>(92) 98444-6540 (Whats Geral)</span>
-                  <span>(92) 98432-1699 (Whats Acolhimento)</span>
+                <span className="text-blue-100 text-sm font-medium flex flex-col gap-2">
+                  <a href="tel:9233047704" className="hover:text-highlight transition-colors">(92) 3304-7704 (Fixo)</a>
+                  <a href="https://wa.me/5592984446540" target="_blank" rel="noopener noreferrer" className="hover:text-highlight transition-colors">(92) 98444-6540 (WhatsApp Geral)</a>
+                  <a href="https://wa.me/5592984321699" target="_blank" rel="noopener noreferrer" className="hover:text-highlight transition-colors">(92) 98432-1699 (WhatsApp Acolhimento)</a>
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-[#FFEF00] flex-shrink-0" />
-                <span className="text-blue-100 text-sm font-medium">contato@desafiojovemmanaus.org.br</span>
+                <a 
+                  href="mailto:contato@desafiojovemmanaus.org.br" 
+                  className="text-blue-100 text-sm font-medium hover:text-highlight transition-colors"
+                >
+                  contato@desafiojovemmanaus.org.br
+                </a>
               </li>
               <li className="flex items-start space-x-3">
                 <Clock className="w-5 h-5 text-[#FFEF00] flex-shrink-0 mt-0.5" />

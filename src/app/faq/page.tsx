@@ -38,7 +38,7 @@ export default function FAQPage() {
   const faqAjuda = [
     { question: "Estou ansioso, como faço pra injetar R$ financeiro hoje?", answer: "Todas as suas vias generosas de doações (Listas Pix, chaves primárias ou transferência nominal direta da Conta Base) se escondem com maestria lá dentro da Aba centralizada do menu 'Como Ajudar'. Confie, é super simples e estopim rápido de alívio social!" },
     { question: "Vocês recebem caixas com velhas camisas usadas?", answer: "Ótima e salvadora pergunta. Sim! Nós captamos camisas, sapatos, e calças, desde que sejam focados estritamente na roupagem Masculina adulta e ainda aguentem as intempéries." },
-    { question: "Como faço pra ir suar e varrer chão com vocês como motor solidário?", answer: "Você preenche os simples campos cegos do formulário estático de 'Voluntariado' no topo da via online 'Como Ajudar', ou nos remete um email simples e rústico de declaração p/: desafiojovemmanaus@gmail.com." },
+    { question: "Como faço pra ir suar e varrer chão com vocês como motor solidário?", answer: "Você preenche os simples campos cegos do formulário estático de 'Voluntariado' no topo da via online 'Como Ajudar', ou nos remete um email simples e rústico de declaração p/: contato@desafiojovemmanaus.org.br." },
   ];
 
   const faqInstituicao = [

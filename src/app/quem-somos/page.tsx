@@ -1,16 +1,17 @@
 import MissaoVisaoValores from "@/components/MissaoVisaoValores";
 import RecognitionsSection from "@/components/RecognitionsSection";
 import PageSidebar from "@/components/PageSidebar";
-import { ImageIcon, PlayCircle, MapPin, Bed, Users, Laptop, Car, Utensils, Award, BookOpen, History, Crown, Building, FileText, Shield } from "lucide-react";
+import StructureCarousel from "@/components/StructureCarousel";
+import { PlayCircle, MapPin, Bed, Users, Laptop, Car, Utensils, Award, BookOpen, History, Crown, Building, FileText, Shield, ImageIcon } from "lucide-react";
 
 export default function QuemSomosPage() {
   const sidebarItems = [
     { label: "Histórico", anchor: "historico", icon: <History className="w-5 h-5" /> },
+    { label: "Missão e Valores", anchor: "missao", icon: <Shield className="w-5 h-5" /> },
     { label: "Diretoria", anchor: "diretoria", icon: <Crown className="w-5 h-5" /> },
     { label: "Equipe", anchor: "equipe", icon: <Users className="w-5 h-5" /> },
     { label: "Estrutura física", anchor: "estrutura", icon: <Building className="w-5 h-5" /> },
-    { label: "Estatuto e atas", anchor: "estatuto", icon: <FileText className="w-5 h-5" /> },
-    { label: "Prêmios e reconhecimentos", anchor: "premios", icon: <Award className="w-5 h-5" /> },
+    { label: "Prêmios e reconhecimento", anchor: "premios", icon: <Award className="w-5 h-5" /> },
     { label: "Utilidade pública", anchor: "utilidade-publica", icon: <Shield className="w-5 h-5" /> },
   ];
 
@@ -24,7 +25,7 @@ export default function QuemSomosPage() {
     { year: "2015", title: "Braços Abertos", text: "Nasce o Serviço de Abordagem Social." },
     { year: "2018", title: "Acolher p/ Viver", text: "Início do formato de Abrigo Institucional." },
     { year: "2023", title: "ALEAM", text: "Honraria por serviços prestados ao Amazonas." },
-    { year: "2024", title: "Marca Histórica", text: "Supera os 40.000 atendimentos realizados." },
+    { year: "2024", title: "10 Anos Braços Abertos", text: "Comemoração dos 10 anos do Projeto Braços Abertos." },
   ];
 
   const diretoria = [
@@ -82,7 +83,7 @@ export default function QuemSomosPage() {
             <div className="lg:col-span-9 space-y-24 pb-20">
               
               {/* Histórico */}
-              <section id="historico" className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-200">
+              <section id="historico" className="scroll-mt-[100px] bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-200">
                 <div className="grid lg:grid-cols-2 gap-10 items-center mb-16">
                   <div>
                     <h2 className="text-4xl font-bold text-primary-dark mb-6 relative inline-block">
@@ -96,9 +97,32 @@ export default function QuemSomosPage() {
                     </div>
                   </div>
                   
-                  <div className="w-full h-full min-h-[250px] bg-slate-100 rounded-3xl border-2 border-dashed border-slate-300 flex flex-col items-center justify-center p-6 text-slate-400 group hover:border-primary/50 cursor-pointer transition-colors shadow-inner">
-                     <PlayCircle className="w-16 h-16 mb-4 group-hover:scale-110 transition-transform group-hover:text-primary" />
-                     <span className="font-medium text-lg text-slate-500 text-center">[ Vídeo curto institucional sobre a evolução ]</span>
+                  <div className="space-y-12">
+                    <div className="relative group">
+                      <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100 shadow-lg border border-slate-200">
+                        <img 
+                          src="/historico-foto-contrucao-josani-e-joao.jpeg" 
+                          alt="Josani e João na construção" 
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </div>
+                      <p className="mt-4 text-sm text-slate-500 italic text-center font-medium leading-relaxed">
+                        "Josani e João, fundadores do Desafio Jovem de Manaus, durante a construção da sede."
+                      </p>
+                    </div>
+
+                    <div className="relative group">
+                      <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100 shadow-lg border border-slate-200">
+                        <img 
+                          src="/historico-foto-doação-josani-e-joao.jpeg" 
+                          alt="João e Josani recebendo doação" 
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </div>
+                      <p className="mt-4 text-sm text-slate-500 italic text-center font-medium leading-relaxed">
+                        "João e Josani recebendo uma doação em 2025."
+                      </p>
+                    </div>
                   </div>
                 </div>
 
@@ -117,8 +141,8 @@ export default function QuemSomosPage() {
                 </div>
               </section>
 
-              {/* Missão (Nova Visualização) */}
-              <section id="missao" className="overflow-hidden bg-white">
+              {/* Missão e Valores */}
+              <section id="missao" className="scroll-mt-[100px] overflow-hidden bg-white rounded-3xl border border-slate-200">
                 <MissaoVisaoValores />
                 <div className="bg-slate-50 pb-10 pt-4 text-center px-8">
                   <p className="max-w-3xl mx-auto text-sm md:text-base font-bold text-slate-600 uppercase tracking-widest border border-slate-200 py-4 px-6 rounded-xl bg-white shadow-sm">
@@ -128,9 +152,9 @@ export default function QuemSomosPage() {
               </section>
 
               {/* Diretoria */}
-              <section id="diretoria">
+              <section id="diretoria" className="scroll-mt-[100px]">
                 <h2 className="text-3xl font-bold text-primary-dark mb-3 border-l-4 border-primary pl-4">Membros da Diretoria</h2>
-                <p className="text-slate-500 mb-8 font-medium">Todos os membros colegiados atuam obrigatoriamente de forma 100% voluntária em prol da causa social.</p>
+                <p className="text-slate-500 mb-8 font-medium">Todos os membros colegiados atuam de forma voluntária em prol da causa social.</p>
                 
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {diretoria.map((dir, i) => (
@@ -147,7 +171,7 @@ export default function QuemSomosPage() {
               </section>
 
               {/* Equipe Multiprofissional */}
-              <section id="equipe" className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-200">
+              <section id="equipe" className="scroll-mt-[100px] bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-200">
                 <h2 className="text-3xl font-bold text-primary-dark mb-3 border-l-4 border-primary pl-4">Nossa Equipe Técnica</h2>
                 <p className="text-slate-600 mb-10 max-w-3xl leading-relaxed font-medium">
                   A organização conta com mais de 23 profissionais fixos em sua base. A equipe técnica matriz central é composta por 3 psicólogos, 3 assistentes sociais e 1 pedagoga, todos com experiência diária no Terceiro Setor.
@@ -163,7 +187,7 @@ export default function QuemSomosPage() {
               </section>
 
               {/* Estrutura Física */}
-              <section id="estrutura" className="bg-primary-dark text-white rounded-3xl overflow-hidden shadow-xl border border-slate-700">
+              <section id="estrutura" className="scroll-mt-[100px] bg-primary-dark text-white rounded-3xl overflow-hidden shadow-xl border border-slate-700">
                 <div className="p-8 md:p-10">
                   <h2 className="text-3xl font-bold text-white mb-10 border-l-4 border-teal-400 pl-4">Estrutura Física</h2>
                   
@@ -201,28 +225,18 @@ export default function QuemSomosPage() {
                       </div>
                     </div>
 
-                    {/* Placeholder Fotos */}
-                    <div className="w-full h-full min-h-[300px] bg-primary-dark/50 rounded-2xl overflow-hidden relative flex flex-col items-center justify-center p-6 border-2 border-dashed border-slate-600/80 shadow-inner group">
-                      <ImageIcon className="w-16 h-16 text-slate-500 mb-4 group-hover:scale-110 group-hover:text-highlight transition-transform" />
-                      <p className="text-slate-400 font-bold text-center group-hover:text-teal-300 transition-colors">[ Carrossel de Fotos do Espaço, Refeitório e Salas ]</p>
+                    {/* Galeria de Fotos */}
+                    <div className="w-full h-full min-h-[350px] md:min-h-[450px]">
+                      <StructureCarousel />
                     </div>
 
                   </div>
                 </div>
               </section>
 
-              {/* Estatuto e Atas */}
-              <section id="estatuto" className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-200 text-center py-20 flex flex-col items-center justify-center">
-                <FileText className="w-16 h-16 text-slate-200 mb-4" />
-                <h2 className="text-3xl font-bold text-primary-dark mb-4">Estatuto Oficial e Atas</h2>
-                <p className="text-lg text-slate-500 mb-8 max-w-2xl font-medium">O Estatuto Social rege todas as diretrizes operacionais, morais e civis do Desafio Jovem de Manaus, bem como as aprovações unânimes em Assembleia documentadas publicamente nas atas institucionais vigentes.</p>
-                <div className="px-6 py-4 bg-slate-50 border-2 border-dashed border-slate-200 rounded-xl text-slate-400 font-bold uppercase tracking-widest text-sm">
-                  [ Placeholder: Inserir Visualizador ou Links p/ Download em PDF do Estatuto ]
-                </div>
-              </section>
 
               {/* Prêmios e Reconhecimentos */}
-              <section id="premios" className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-200">
+              <section id="premios" className="scroll-mt-[100px] bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-200">
                 <h2 className="text-3xl font-bold text-primary-dark mb-10 border-l-4 border-primary pl-4">Prêmios e Reconhecimentos</h2>
                 {/* Reutilizando componente de Reconhecimentos que já existia na estrutura e apenas limpando margens se necessário */}
                 <div className="-mx-4 md:-mx-8">
@@ -231,7 +245,7 @@ export default function QuemSomosPage() {
               </section>
 
               {/* Utilidade Pública */}
-              <section id="utilidade-publica" className="bg-gradient-to-br from-primary to-primary-dark text-white p-8 md:p-10 rounded-3xl shadow-xl flex flex-col justify-center items-center text-center py-20 relative overflow-hidden">
+              <section id="utilidade-publica" className="scroll-mt-[100px] bg-gradient-to-br from-primary to-primary-dark text-white p-8 md:p-10 rounded-3xl shadow-xl flex flex-col justify-center items-center text-center py-20 relative overflow-hidden">
                 <Shield className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] text-white/5" />
                 
                 <h2 className="text-3xl font-bold mb-4 relative z-10">Títulos de Utilidade Pública</h2>
@@ -242,14 +256,29 @@ export default function QuemSomosPage() {
                 <div className="grid sm:grid-cols-2 gap-6 w-full max-w-3xl relative z-10">
                   <div className="bg-white/10 p-6 rounded-2xl border border-white/20 backdrop-blur-sm">
                     <Shield className="w-10 h-10 text-teal-300 mx-auto mb-4" />
-                    <h4 className="font-bold text-xl mb-1">Qualificação Municipal</h4>
-                    <p className="text-sm text-teal-100 italic">[ Adicionar n° do Decreto / Ano ]</p>
+                    <h4 className="font-bold text-xl mb-1 text-teal-50">Qualificação Municipal</h4>
+                    <p className="text-sm text-teal-100 italic font-medium opacity-60 mt-2 tracking-tighter">Concedida desde 1985</p>
                   </div>
-                  <div className="bg-white/10 p-6 rounded-2xl border border-white/20 backdrop-blur-sm">
-                    <Shield className="w-10 h-10 text-teal-300 mx-auto mb-4" />
-                    <h4 className="font-bold text-xl mb-1">Qualificação Estadual</h4>
-                    <p className="text-sm text-teal-100 italic">[ Adicionar n° do Decreto / Ano ]</p>
-                  </div>
+                  
+                  <a 
+                    href="/Utilidade-publica-estadual.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="group bg-white/20 p-6 rounded-2xl border border-teal-300/50 backdrop-blur-md hover:bg-white/30 transition-all duration-300 flex flex-col items-center justify-center relative overflow-hidden"
+                  >
+                    <div className="absolute top-0 right-0 p-2 opacity-20 group-hover:opacity-100 transition-opacity">
+                      <FileText className="w-5 h-5 text-teal-300" />
+                    </div>
+                    
+                    <Shield className="w-10 h-10 text-teal-300 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                    <h4 className="font-bold text-xl mb-1 text-white">Qualificação Estadual</h4>
+                    <p className="text-sm text-teal-100 italic font-medium mt-2 tracking-tighter">Decreto Estadual n° 13.978-91</p>
+                    
+                    <div className="mt-6 flex items-center justify-center gap-2 bg-white text-primary px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg group-hover:bg-highlight group-hover:text-primary-dark transition-colors">
+                      <FileText className="w-3.5 h-3.5" />
+                      Visualizar Certificado
+                    </div>
+                  </a>
                 </div>
               </section>
 

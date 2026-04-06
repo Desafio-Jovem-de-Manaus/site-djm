@@ -207,7 +207,7 @@ export default function ComoAjudarPage() {
                   </div>
                   <div>
                     <p className="text-xs uppercase font-bold text-slate-400 tracking-widest mb-2">Envie seu Currículo em PDF:</p>
-                    <a href="mailto:desafiojovemmanaus@gmail.com" className="text-lg font-black text-blue-600 hover:text-blue-800 transition-colors break-words">desafiojovemmanaus@gmail.com</a>
+                    <a href="mailto:contato@desafiojovemmanaus.org.br" className="text-lg font-black text-blue-600 hover:text-blue-800 transition-colors break-words">contato@desafiojovemmanaus.org.br</a>
                   </div>
                 </section>
 
