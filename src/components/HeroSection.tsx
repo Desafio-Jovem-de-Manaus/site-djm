@@ -66,11 +66,14 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-[90vh] flex flex-col justify-center bg-primary-dark text-white overflow-hidden pt-20">
       {/* Background with Dark Overlay */}
-      <div className="absolute inset-0 bg-primary z-0">
-        <div className="w-full h-full flex items-center justify-center bg-primary-dark/80">
-           <span className="text-blue-300/50 font-medium tracking-widest uppercase">[ Imagem de Fundo Escurecida ]</span>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-primary-dark via-primary-dark/80 to-primary-dark/40"></div>
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/Home-Imagem%20-de-Fundo-3.jpeg" 
+          alt="Fundo Institucional" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-primary-dark/75"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-primary-dark via-primary-dark/60 to-transparent"></div>
       </div>
 
       {/* Content wrapper */}

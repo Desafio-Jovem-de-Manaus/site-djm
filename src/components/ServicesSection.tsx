@@ -55,11 +55,6 @@ export default function ServicesSection() {
                 </p>
               </div>
 
-              <div className="w-full h-32 bg-slate-100 rounded-xl border border-dashed border-slate-300 flex items-center justify-center mb-6 text-slate-500">
-                <PlayCircle className="w-6 h-6 mr-2" />
-                <span className="text-sm font-medium">[ Vídeo sobre o programa de recuperação ]</span>
-              </div>
-
               <Link href="/dep-quimica" className="mt-auto inline-flex items-center text-purple-700 font-bold hover:text-purple-900 transition-colors">
                 Saiba mais <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
@@ -93,11 +88,6 @@ export default function ServicesSection() {
                 <p className="text-sm text-blue-800 leading-relaxed">
                   51 acolhimentos <span className="mx-1">•</span> 815 atendimentos psicossociais <span className="mx-1">•</span> 838 encaminhamentos para rede SUAS/SUS <span className="mx-1">•</span> 71% restabeleceram contato familiar <span className="mx-1">•</span> Capacidade: 25 vagas simultâneas
                 </p>
-              </div>
-
-              <div className="w-full h-32 bg-slate-100 rounded-xl border border-dashed border-slate-300 flex items-center justify-center mb-6 text-slate-500">
-                <PlayCircle className="w-6 h-6 mr-2" />
-                <span className="text-sm font-medium">[ Vídeo sobre o Abrigo ]</span>
               </div>
 
               <Link href="/social" className="mt-auto inline-flex items-center text-blue-700 font-bold hover:text-blue-900 transition-colors">
@@ -136,11 +126,6 @@ export default function ServicesSection() {
                 </p>
               </div>
 
-              <div className="w-full h-32 bg-slate-100 rounded-xl border border-dashed border-slate-300 flex items-center justify-center mb-6 text-slate-500">
-                <PlayCircle className="w-6 h-6 mr-2" />
-                <span className="text-sm font-medium">[ Vídeo Projeto Braços Abertos ]</span>
-              </div>
-
               <Link href="/social" className="mt-auto inline-flex items-center text-orange-600 font-bold hover:text-orange-800 transition-colors">
                 Saiba mais <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
@@ -175,11 +160,6 @@ export default function ServicesSection() {
                 <p className="text-sm text-blue-800 leading-relaxed">
                   20 famílias assistidas (52 pessoas) <span className="mx-1">•</span> 4 oficinas de iniciação profissional <span className="mx-1">•</span> 4 oficinas de empreendedorismo <span className="mx-1">•</span> 70 crianças atendidas no Dia das Crianças <span className="mx-1">•</span> 100% dos cadastros são mulheres chefes de família
                 </p>
-              </div>
-
-              <div className="w-full h-32 bg-slate-100 rounded-xl border border-dashed border-slate-300 flex items-center justify-center mb-6 text-slate-500">
-                <PlayCircle className="w-6 h-6 mr-2" />
-                <span className="text-sm font-medium">[ Vídeo Comunidade Eficiente ]</span>
               </div>
 
               <Link href="/social" className="mt-auto inline-flex items-center text-primary font-bold hover:text-primary-dark transition-colors">

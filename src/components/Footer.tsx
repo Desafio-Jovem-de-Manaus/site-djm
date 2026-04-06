@@ -69,6 +69,11 @@ export default function Footer() {
                   Perguntas Frequentes (FAQ)
                 </Link>
               </li>
+              <li>
+                <Link href="/contato" className="text-blue-100 hover:text-highlight transition-colors font-medium">
+                  Precisa de ajuda?
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -87,14 +92,14 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-[#FFEF00] flex-shrink-0 mt-0.5" />
                 <span className="text-blue-100 text-sm font-medium flex flex-col gap-1">
-                  <span>(92) 3304-7704</span>
-                  <span>(92) 98412-4324 / 98160-1574 (Whats)</span>
-                  <span>(92) 98444-6540 / 98432-1699 (Social)</span>
+                  <span>(92) 3304-7704 (Fixo)</span>
+                  <span>(92) 98444-6540 (Whats Geral)</span>
+                  <span>(92) 98432-1699 (Whats Acolhimento)</span>
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-[#FFEF00] flex-shrink-0" />
-                <span className="text-blue-100 text-sm font-medium">desafiojovemmanaus@gmail.com</span>
+                <span className="text-blue-100 text-sm font-medium">contato@desafiojovemmanaus.org.br</span>
               </li>
               <li className="flex items-start space-x-3">
                 <Clock className="w-5 h-5 text-[#FFEF00] flex-shrink-0 mt-0.5" />

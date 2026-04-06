@@ -1,6 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
-import MissionSection from "@/components/MissionSection";
+import MissaoVisaoValores from "@/components/MissaoVisaoValores";
 import RecognitionsSection from "@/components/RecognitionsSection";
 import NewsSection from "@/components/NewsSection";
 import InstagramSection from "@/components/InstagramSection";
@@ -12,7 +12,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <HeroSection />
       <ServicesSection />
-      <MissionSection />
+      <MissaoVisaoValores />
       <RecognitionsSection />
       <NewsSection />
       <InstagramSection />

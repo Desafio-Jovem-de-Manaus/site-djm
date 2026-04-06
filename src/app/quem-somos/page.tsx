@@ -1,4 +1,4 @@
-import MissionSection from "@/components/MissionSection";
+import MissaoVisaoValores from "@/components/MissaoVisaoValores";
 import RecognitionsSection from "@/components/RecognitionsSection";
 import PageSidebar from "@/components/PageSidebar";
 import { ImageIcon, PlayCircle, MapPin, Bed, Users, Laptop, Car, Utensils, Award, BookOpen, History, Crown, Building, FileText, Shield } from "lucide-react";
@@ -117,10 +117,10 @@ export default function QuemSomosPage() {
                 </div>
               </section>
 
-              {/* Missão (Herdada e Embutida) */}
-              <section id="missao" className="overflow-hidden rounded-3xl shadow-sm border border-slate-200">
-                <MissionSection />
-                <div className="bg-slate-100 pb-10 pt-4 text-center px-8">
+              {/* Missão (Nova Visualização) */}
+              <section id="missao" className="overflow-hidden bg-white">
+                <MissaoVisaoValores />
+                <div className="bg-slate-50 pb-10 pt-4 text-center px-8">
                   <p className="max-w-3xl mx-auto text-sm md:text-base font-bold text-slate-600 uppercase tracking-widest border border-slate-200 py-4 px-6 rounded-xl bg-white shadow-sm">
                     <strong>Finalidade Estatutária:</strong> Promover educação, capacitação, assistência social, saúde física e psicológica, acolhimento, prevenção e recuperação.
                   </p>
