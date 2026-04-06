@@ -141,10 +141,24 @@ export default function NoticiaPage({ params }: { params: Promise<{ slug: string
           </div>
         )}
 
+        {/* 6.5 Imagem complementar (se houver) */}
+        {news.footerImage && (
+          <div className="mb-10 rounded-2xl overflow-hidden shadow-sm border border-slate-200">
+            <img 
+              src={news.footerImage} 
+              alt="Imagem complementar da matéria" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        )}
+
         {/* 7. Divisor e rodapé da matéria */}
         <footer className="border-t border-slate-200 pt-6 text-sm text-slate-500">
-          Publicado em <strong>{news.date}</strong> | Categoria:{" "}
-          <strong>{news.category}</strong>
+          Publicado em <strong>{news.date}</strong> 
+          {news.author && (
+            <> | Por: <strong>{news.author}</strong></>
+          )} 
+          | Categoria: <strong>{news.category}</strong>
         </footer>
 
       </div>

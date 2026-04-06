@@ -25,8 +25,8 @@ export default function NoticiasPage() {
            <Newspaper className="w-[800px] h-[800px]" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-xl">Notícias e Imprensa Viva</h1>
-          <p className="text-xl md:text-2xl text-emerald-200 font-medium max-w-4xl mx-auto leading-relaxed drop-shadow">Varra as camadas orgânicas do pó jornalístico da cidade e acompanhe em dados duros as atividades que mudam pontes de desespero nas ladeiras diárias de Manaus do Amazonas.</p>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-xl">Notícias e Eventos</h1>
+          <p className="text-xl md:text-2xl text-emerald-200 font-medium max-w-4xl mx-auto leading-relaxed drop-shadow">Acompanhe as principais atividades, eventos e conquistas do Desafio Jovem de Manaus. Aqui você encontra atualizações sobre nossos programas, ações comunitárias e o impacto do nosso trabalho na vida de milhares de pessoas em situação de vulnerabilidade.</p>
         </div>
       </section>
 
@@ -74,6 +74,7 @@ export default function NoticiasPage() {
                       date={n.date}
                       category={n.category}
                       resume={n.resume}
+                      image={n.mainImage}
                     />
                   ))}
                 </div>
@@ -94,13 +95,6 @@ export default function NoticiasPage() {
 
           </div>
 
-          {/* Aviso Fixado Cível do Final da Grade */}
-          <div className="mt-16 text-center">
-            <span className="inline-block bg-yellow-100 text-yellow-800 border border-yellow-200 px-6 py-3 rounded-2xl font-bold text-sm shadow-sm ring-1 ring-yellow-500/20">
-              📌 MURAL DA IMPRENSA: Fique grudado e engatilhado nisto. Tão breve nascerão novos frutos do asfalto, e esta robusta seção de banco de notícias será crivada pesadamente com notícias mais recentes deste exato final-corrente de mês.
-            </span>
-          </div>
-          
         </div>
       </section>
 

@@ -8,22 +8,34 @@ interface NewsCardProps {
   category: string;
   title: string;
   resume?: string;
+  image?: string;
 }
 
-export default function NewsCard({ slug, date, category, title, resume }: NewsCardProps) {
+export default function NewsCard({ slug, date, category, title, resume, image }: NewsCardProps) {
   const config = getCategoryConfig(category);
   const CategoryIcon = config.icon;
 
   return (
     <div className="relative bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl hover:border-primary/50 transition-all duration-300 group flex flex-col h-full hover:-translate-y-2 cursor-pointer">
       
-      {/* Imagem Placeholder */}
-      <div className="aspect-[4/3] bg-slate-100 relative overflow-hidden flex flex-col items-center justify-center text-slate-400 group-hover:bg-slate-200 transition-colors">
-        <span className="text-xs font-black uppercase tracking-widest bg-white/50 px-3 py-1 rounded-full text-slate-500 backdrop-blur-sm shadow-sm z-10">
-          [ Placeholder Imagem ]
-        </span>
+      {/* Imagem da Notícia */}
+      <div className="aspect-[4/3] bg-slate-100 relative overflow-hidden group-hover:bg-slate-200 transition-colors">
+        {image ? (
+          <img 
+            src={image} 
+            alt={title} 
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+        ) : (
+          <div className="w-full h-full flex flex-col items-center justify-center text-slate-400">
+            <span className="text-xs font-black uppercase tracking-widest bg-white/50 px-3 py-1 rounded-full text-slate-500 backdrop-blur-sm shadow-sm z-10">
+              [ Placeholder Imagem ]
+            </span>
+          </div>
+        )}
+        
         {/* Overlay do hover para engajamento */}
-        <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500"></div>
+        <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
         
         {/* Tag Flutuante Colorida Dinâmica com Ícone */}
         <div className={`absolute top-4 left-4 border text-[10px] font-bold px-4 py-1.5 rounded-full shadow-sm z-20 flex items-center ${config.classes}`}>
