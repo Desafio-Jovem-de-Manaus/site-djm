@@ -23,6 +23,7 @@ const navigation: NavItem[] = [
       { name: "Diretoria", href: "/quem-somos#diretoria" },
       { name: "Equipe", href: "/quem-somos#equipe" },
       { name: "Estrutura física", href: "/quem-somos#estrutura" },
+      { name: "Parceiros", href: "/quem-somos#parceiros" },
       { name: "Prêmios e reconhecimento", href: "/quem-somos#premios" },
       { name: "Utilidade pública", href: "/quem-somos#utilidade-publica" },
     ],

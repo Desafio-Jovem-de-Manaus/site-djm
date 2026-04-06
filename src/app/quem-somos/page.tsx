@@ -2,7 +2,8 @@ import MissaoVisaoValores from "@/components/MissaoVisaoValores";
 import RecognitionsSection from "@/components/RecognitionsSection";
 import PageSidebar from "@/components/PageSidebar";
 import StructureCarousel from "@/components/StructureCarousel";
-import { PlayCircle, MapPin, Bed, Users, Laptop, Car, Utensils, Award, BookOpen, History, Crown, Building, FileText, Shield, ImageIcon } from "lucide-react";
+import { PlayCircle, MapPin, Bed, Users, Laptop, Car, Utensils, Award, BookOpen, History, Crown, Building, FileText, Shield, ImageIcon, Handshake } from "lucide-react";
+import PartnersCarousel from "@/components/PartnersCarousel";
 
 export default function QuemSomosPage() {
   const sidebarItems = [
@@ -11,6 +12,7 @@ export default function QuemSomosPage() {
     { label: "Diretoria", anchor: "diretoria", icon: <Crown className="w-5 h-5" /> },
     { label: "Equipe", anchor: "equipe", icon: <Users className="w-5 h-5" /> },
     { label: "Estrutura física", anchor: "estrutura", icon: <Building className="w-5 h-5" /> },
+    { label: "Parceiros", anchor: "parceiros", icon: <Handshake className="w-5 h-5" /> },
     { label: "Prêmios e reconhecimento", anchor: "premios", icon: <Award className="w-5 h-5" /> },
     { label: "Utilidade pública", anchor: "utilidade-publica", icon: <Shield className="w-5 h-5" /> },
   ];
@@ -234,6 +236,10 @@ export default function QuemSomosPage() {
                 </div>
               </section>
 
+              {/* Quem nos apoia (Parceiros) */}
+              <section id="parceiros" className="scroll-mt-[100px] bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                <PartnersCarousel />
+              </section>
 
               {/* Prêmios e Reconhecimentos */}
               <section id="premios" className="scroll-mt-[100px] bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-200">

@@ -26,8 +26,16 @@ export default function ServicesSection() {
           {/* Card 1: Comunidade Terapêutica */}
           <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100 flex flex-col group hover:-translate-y-2 transition-transform duration-300">
             <div className="h-[400px] bg-purple-900 flex items-center justify-center relative overflow-hidden">
-              <img src="/home-servicos-institucionais-ct.png" alt="Comunidade Terapêutica" className="absolute inset-0 w-full h-full object-cover z-0" loading="lazy" />
+              <img src="/home-servicos-institucionais-ct.png" alt="Comunidade Terapêutica" className="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-500 group-hover:scale-110" loading="lazy" />
               <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-900/80 to-transparent z-10"></div>
+              
+              {/* Botão Flutuante sobre a Foto */}
+              <Link 
+                href="/dep-quimica" 
+                className="absolute bottom-4 left-4 z-20 bg-purple-700 text-white text-xs md:text-sm font-bold px-4 py-2 rounded-xl shadow-lg border border-white/20 hover:bg-purple-800 hover:scale-105 transition-all duration-300 flex items-center gap-2"
+              >
+                Saiba mais <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
             <div className="p-8 flex-grow flex flex-col border-t-4 border-purple-700">
               <div className="text-purple-700 font-bold tracking-wider text-sm mb-2 uppercase">Comunidade Terapêutica</div>
@@ -64,8 +72,16 @@ export default function ServicesSection() {
           {/* Card 2: Abrigo Institucional */}
           <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100 flex flex-col group hover:-translate-y-2 transition-transform duration-300">
             <div className="h-[400px] bg-blue-800 flex items-center justify-center relative overflow-hidden">
-              <img src="/home-servicos-institucionais-abrigo.png" alt="Abrigo Institucional" className="absolute inset-0 w-full h-full object-cover z-0" loading="lazy" />
+              <img src="/home-servicos-institucionais-abrigo.png" alt="Abrigo Institucional" className="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-500 group-hover:scale-110" loading="lazy" />
               <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-900/80 to-transparent z-10"></div>
+              
+              {/* Botão Flutuante sobre a Foto */}
+              <Link 
+                href="/social" 
+                className="absolute bottom-4 left-4 z-20 bg-blue-600 text-white text-xs md:text-sm font-bold px-4 py-2 rounded-xl shadow-lg border border-white/20 hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center gap-2"
+              >
+                Saiba mais <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
             <div className="p-8 flex-grow flex flex-col border-t-4 border-blue-600">
               <div className="text-blue-700 font-bold tracking-wider text-sm mb-2 uppercase">Abrigo Institucional</div>
@@ -99,8 +115,16 @@ export default function ServicesSection() {
           {/* Card 3: Abordagem Social */}
           <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100 flex flex-col group hover:-translate-y-2 transition-transform duration-300">
             <div className="h-[400px] bg-orange-600 flex items-center justify-center relative overflow-hidden">
-              <img src="/home-servicos-institucionais-abordagem.png" alt="Abordagem Social" className="absolute inset-0 w-full h-full object-cover z-0" loading="lazy" />
+              <img src="/home-servicos-institucionais-abordagem.png" alt="Abordagem Social" className="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-500 group-hover:scale-110" loading="lazy" />
               <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-900/80 to-transparent z-10"></div>
+              
+              {/* Botão Flutuante sobre a Foto */}
+              <Link 
+                href="/social" 
+                className="absolute bottom-4 left-4 z-20 bg-orange-500 text-white text-xs md:text-sm font-bold px-4 py-2 rounded-xl shadow-lg border border-white/20 hover:bg-orange-600 hover:scale-105 transition-all duration-300 flex items-center gap-2"
+              >
+                Saiba mais <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
             <div className="p-8 flex-grow flex flex-col border-t-4 border-orange-500">
               <div className="text-orange-600 font-bold tracking-wider text-sm mb-2 uppercase">Abordagem Social</div>
@@ -135,8 +159,16 @@ export default function ServicesSection() {
           {/* Card 4: Comunidade Eficiente */}
           <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100 flex flex-col group hover:-translate-y-2 transition-transform duration-300">
             <div className="h-[400px] bg-primary flex items-center justify-center relative overflow-hidden">
-              <img src="/home-servicos-institucionais-comef.png" alt="Comunidade Eficiente" className="absolute inset-0 w-full h-full object-cover z-0" loading="lazy" />
+              <img src="/home-servicos-institucionais-comef.png" alt="Comunidade Eficiente" className="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-500 group-hover:scale-110" loading="lazy" />
               <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-900/80 to-transparent z-10"></div>
+              
+              {/* Botão Flutuante sobre a Foto */}
+              <Link 
+                href="/social" 
+                className="absolute bottom-4 left-4 z-20 bg-primary text-white text-xs md:text-sm font-bold px-4 py-2 rounded-xl shadow-lg border border-white/20 hover:bg-primary-dark hover:scale-105 transition-all duration-300 flex items-center gap-2"
+              >
+                Saiba mais <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
             <div className="p-8 flex-grow flex flex-col border-t-4 border-primary">
               <div className="text-primary font-bold tracking-wider text-sm mb-2 uppercase">Comunidade Eficiente</div>
