@@ -10,6 +10,15 @@ const images = [
   { url: "/Estrutura-fisica-4.jpeg", alt: "Estrutura do Desafio Jovem de Manaus 4" },
   { url: "/Estrutura-fisica-5.jpeg", alt: "Estrutura do Desafio Jovem de Manaus 5" },
   { url: "/Estrutura-fisica-6.jpeg", alt: "Estrutura do Desafio Jovem de Manaus 6" },
+  { url: "/Estrutura-fisica-7.jpeg", alt: "Estrutura do Desafio Jovem de Manaus 7" },
+  { url: "/Estrutura-fisica-8.jpeg", alt: "Estrutura do Desafio Jovem de Manaus 8" },
+  { url: "/Estrutura-fisica-9.jpeg", alt: "Estrutura do Desafio Jovem de Manaus 9" },
+  { url: "/Estrutura-fisica-10.jpeg", alt: "Estrutura do Desafio Jovem de Manaus 10" },
+  { url: "/Estrutura-fisica-11.jpeg", alt: "Estrutura do Desafio Jovem de Manaus 11" },
+  { url: "/Estrutura-fisica-12.jpeg", alt: "Estrutura do Desafio Jovem de Manaus 12" },
+  { url: "/Estrutura-fisica-13.jpeg", alt: "Estrutura do Desafio Jovem de Manaus 13" },
+  { url: "/Estrutura-fisica-14.jpeg", alt: "Estrutura do Desafio Jovem de Manaus 14" },
+  { url: "/Estrutura-fisica-15.jpeg", alt: "Estrutura do Desafio Jovem de Manaus 15" },
 ];
 
 export default function StructureCarousel() {

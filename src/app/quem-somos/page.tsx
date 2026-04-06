@@ -240,7 +240,7 @@ export default function QuemSomosPage() {
                 <h2 className="text-3xl font-bold text-primary-dark mb-10 border-l-4 border-primary pl-4">Prêmios e Reconhecimentos</h2>
                 {/* Reutilizando componente de Reconhecimentos que já existia na estrutura e apenas limpando margens se necessário */}
                 <div className="-mx-4 md:-mx-8">
-                  <RecognitionsSection />
+                   <RecognitionsSection showTitle={false} />
                 </div>
               </section>
 

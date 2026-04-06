@@ -54,7 +54,7 @@ function VerticalCarousel({ children, speed = 30 }: { children: React.ReactNode;
 }
 
 /* ─── Main section ─── */
-export default function RecognitionsSection() {
+export default function RecognitionsSection({ showTitle = true }: { showTitle?: boolean }) {
   const titulos = [
     { title: "Título de Utilidade Pública Municipal", detail: "Desde 1985", icon: ShieldCheck },
     { title: "Título de Utilidade Pública Estadual", detail: "Desde 1991", icon: ShieldCheck },
@@ -74,19 +74,21 @@ export default function RecognitionsSection() {
   ];
 
   return (
-    <section className="py-24 bg-white border-y border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className={`${showTitle ? "py-24 border-y" : "py-0"} bg-white border-slate-200`}>
+      <div className={`${showTitle ? "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" : "w-full"}`}>
 
         {/* Header */}
-        <div className="max-w-3xl mb-16">
-          <div className="w-12 h-1 bg-primary rounded-full mb-6"></div>
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-dark mb-4 tracking-tight">Reconhecimento e Credibilidade</h2>
-          <p className="text-lg text-slate-500 leading-relaxed">
-            Ao longo de mais de quatro décadas, nossa atuação tem sido reconhecida pelo poder público e por entidades nacionais e internacionais.
-          </p>
-        </div>
+        {showTitle && (
+          <div className="max-w-3xl mb-16">
+            <div className="w-12 h-1 bg-primary rounded-full mb-6"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-dark mb-4 tracking-tight">Reconhecimento e Credibilidade</h2>
+            <p className="text-lg text-slate-500 leading-relaxed">
+              Ao longo de mais de quatro décadas, nossa atuação tem sido reconhecida pelo poder público e por entidades nacionais e internacionais.
+            </p>
+          </div>
+        )}
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className={`grid ${showTitle ? "lg:grid-cols-2" : "grid-cols-1 md:grid-cols-2"} gap-16`}>
 
           {/* Coluna 1 — Títulos e Homenagens */}
           <div>
