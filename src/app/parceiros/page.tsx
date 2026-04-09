@@ -39,9 +39,9 @@ export default function ParceirosPage() {
     { title: "Sesc Mesa Brasil", desc: "Doação de gêneros alimentícios.", image: "/Parceiros-Logo-Institucional-Mesa-Brasil.png" },
     { title: "Rede Acolher", desc: "Representação institucional e apoio nas ações e projetos.", image: "/Parceiros-Logo-Institucional-Rede-Acolher.png" },
     { title: "SOMAP", desc: "Cessão do espaço institucional para realização de projetos.", image: "/Parceiros-Logo-Institucional-Somap.jpg" },
-    { title: "Sociedade Bíblica do Brasil SBB", desc: "Doação de literaturas.", image: "/Parceiros-Logo-Institucional-SBB.png" },
-    { title: "Global Teen Challenge", desc: "Representação institucional, treinamentos e apoio nos projetos.", image: "/Parceiros-Logo-Institucional-Global-Teen-Challenge.png" },
-    { title: "Desafio Jovem do Brasil", desc: "Representação institucional, treinamentos e apoio nos projetos.", image: "/Parceiros-Logo-Institucional-Desafio-Jovem-do-Brasil.png" },
+    { title: "Sociedade Bíblica do Brasil SBB", desc: "Doação de literaturas.", image: "/Parceiros-Logo-Institucional-SBB.png", url: "https://www.sbb.com.br/" },
+    { title: "Global Teen Challenge", desc: "Representação institucional, treinamentos e apoio nos projetos.", image: "/Parceiros-Logo-Institucional-Global-Teen-Challenge.png", url: "https://globaltc.org/" },
+    { title: "Desafio Jovem do Brasil", desc: "Representação institucional, treinamentos e apoio nos projetos.", image: "/Parceiros-Logo-Institucional-Desafio-Jovem-do-Brasil.png", url: "https://desafiojovemdobrasil.org.br/" },
     { title: "Rede Recomeçar", desc: "Representação institucional e apoio nas ações e projetos.", image: "/Parceiros-Logo-Rede-Institucional-Recomecar-Amazonas1.png" },
   ];
 
@@ -148,7 +148,7 @@ export default function ParceirosPage() {
 
                 <div className="grid md:grid-cols-2 gap-6">
                    {institucionais.map((item, idx) => (
-                     <ParceiroCard key={`inst-${idx}`} title={item.title} desc={item.desc} image={item.image} />
+                     <ParceiroCard key={`inst-${idx}`} title={item.title} desc={item.desc} image={item.image} url={item.url} />
                    ))}
                 </div>
               </section>

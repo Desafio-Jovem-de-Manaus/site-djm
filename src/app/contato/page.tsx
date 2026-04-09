@@ -128,6 +128,7 @@ export default function ContatoPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           access_key: "f9d29ff6-ac02-4214-a675-091498acafae",
+          to: "contato@desafiojovemmanaus.org.br",
           subject: `Site Contato: ${selectedReason.title}`,
           from_name: formData.name,
           replyto: formData.email,

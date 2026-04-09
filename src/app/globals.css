@@ -9,6 +9,7 @@
   --accent-light: #E67310;
   --highlight: #FFDE00;
   --highlight-light: #FFEF00;
+  --navy: #151C3F;
 }
 
 @theme inline {
@@ -20,6 +21,7 @@
   --color-accent-light: var(--accent-light);
   --color-highlight: var(--highlight);
   --color-highlight-light: var(--highlight-light);
+  --color-navy: var(--navy);
 }
 
 * {

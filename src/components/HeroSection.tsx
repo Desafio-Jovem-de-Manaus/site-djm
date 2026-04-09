@@ -72,22 +72,22 @@ export default function HeroSection() {
           alt="Fundo Institucional" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-primary-dark/75"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-primary-dark via-primary-dark/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-navy/75"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent"></div>
       </div>
 
       {/* Content wrapper */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-12 sm:px-20 lg:px-24 py-52">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
           <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in shadow-black drop-shadow-lg">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 animate-fade-in shadow-black drop-shadow-lg">
               Desde 1981 resgatando vidas na Amazônia
             </h1>
-            <p className="text-xl md:text-2xl text-highlight font-medium mb-6 animate-fade-in animation-delay-100">
+            <p className="text-lg md:text-xl text-highlight font-medium mb-6 animate-fade-in animation-delay-100">
               Promovendo o cuidado integral e a reinserção social de pessoas em situação de vulnerabilidade em Manaus.
             </p>
-            <p className="text-lg text-blue-100 mb-8 animate-fade-in animation-delay-200 leading-relaxed">
+            <p className="text-base text-blue-100 mb-8 animate-fade-in animation-delay-200 leading-relaxed">
               Somos uma Organização da Sociedade Civil de base cristã, dedicada à prevenção, acolhimento, recuperação e reinserção social de pessoas em situação de vulnerabilidade, dependência química e situação de rua.
               <br/><br/>
               Desde a nossa fundação, temos atuado de forma contínua na promoção da dignidade humana, já tendo realizado mais de 40.000 atendimentos e impactado diretamente milhares de vidas e famílias no estado do Amazonas.
