@@ -2,51 +2,55 @@
 
 import { useState, useEffect } from "react";
 import { 
-  PlayCircle, HeartHandshake, PackageOpen, Droplet, 
-  Shirt, MapPin, HandCoins, Heart, Briefcase, ChevronRight, Handshake,
-  Landmark, Package, HandHeart, GraduationCap, Clock, Camera, X,
-  Drumstick, Bath, Footprints
+  HeartHandshake, PackageOpen, Drumstick, Shirt,
+  MapPin, HandCoins, Heart, Briefcase, Handshake,
+  Landmark, Package, HandHeart, GraduationCap, Clock, Footprints
 } from "lucide-react";
 import PageSidebar from "@/components/PageSidebar";
 
 export default function ComoAjudarPage() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [cardImages, setCardImages] = useState<Record<number, string | null>>({});
+  const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
+  const [alimentosHovered, setAlimentosHovered] = useState(false);
+  const [resolvedImages, setResolvedImages] = useState<Record<string, string>>({});
 
-  const handleImageUpload = (index: number, e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      if (file.size > 5 * 1024 * 1024) {
-        alert("O arquivo é muito grande (máximo 5MB).");
-        return;
-      }
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setCardImages(prev => ({ ...prev, [index]: reader.result as string }));
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const handleRemoveImage = (index: number) => {
-    setCardImages(prev => ({ ...prev, [index]: null }));
-  };
-
-  const images = [
+  const heroImages = [
     "/Como-ajudar-capa-1.png",
     "/Como-ajudar-capa-2.png",
     "/Como-ajudar-capa-3.png"
   ];
 
+  // Resolve all card image paths: tries .jpg first, falls back to .png
   useEffect(() => {
-    // Sorteia uma imagem inicial para não ser sempre a mesma
-    setCurrentImageIndex(Math.floor(Math.random() * images.length));
+    const bases = [
+      "/como-ajudar-alimentos-não-perecíveis-1",
+      "/como-ajudar-alimentos-não-perecíveis-2",
+      "/como-ajudar-proteinas-1", "/como-ajudar-proteinas-2",
+      "/como-ajudar-higiene-pessoal-1", "/como-ajudar-higiene-pessoal-2",
+      "/como-ajudar-produtos-limpeza-1", "/como-ajudar-produtos-limpeza-2",
+      "/como-ajudar-roupas-1", "/como-ajudar-roupas-2",
+      "/como-ajudar-calcados-1", "/como-ajudar-calcados-2",
+    ];
+    bases.forEach(base => {
+      const tryJpg = new window.Image();
+      tryJpg.onload = () => setResolvedImages(prev => ({ ...prev, [base]: `${base}.jpg` }));
+      tryJpg.onerror = () => {
+        const tryPng = new window.Image();
+        tryPng.onload = () => setResolvedImages(prev => ({ ...prev, [base]: `${base}.png` }));
+        tryPng.src = `${base}.png`;
+      };
+      tryJpg.src = `${base}.jpg`;
+    });
+  }, []);
 
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 6000); // Troca a cada 6 segundos
+  // Returns the resolved URL (or the .jpg default while probing)
+  const resolveImg = (base: string) => resolvedImages[base] ?? `${base}.jpg`;
 
-    return () => clearInterval(interval);
+  useEffect(() => {
+    setCurrentHeroIndex(Math.floor(Math.random() * heroImages.length));
+    const heroInterval = setInterval(() => {
+      setCurrentHeroIndex((prev) => (prev + 1) % heroImages.length);
+    }, 6000);
+    return () => clearInterval(heroInterval);
   }, []);
 
   const sidebarItems = [
@@ -58,14 +62,14 @@ export default function ComoAjudarPage() {
     { label: "Parcerias empresariais", anchor: "parcerias-empresariais", icon: <Handshake className="w-5 h-5" /> },
   ];
 
+  // Donation cards — 6 items ("Cama, mesa e banho" removed)
+  // badgeBg: background of icon badge | badgeIcon: contrasting icon colour
   const doacoes = [
-    { icon: PackageOpen, color: "text-amber-600 bg-amber-100", title: "Alimentos não perecíveis", desc: "Arroz, feijão, açúcar, óleo, macarrão, leite em pó, café, etc." },
-    { icon: Drumstick, color: "text-rose-600 bg-rose-100", title: "Proteínas", desc: "Frango, ovos, linguiça, carne enlatada." },
-    { icon: Bath, color: "text-primary bg-teal-100", title: "Higiene pessoal", desc: "Sabonete, creme dental, escova de dente, papel higiênico, desodorante." },
-    { icon: SparklesIcon, color: "text-blue-600 bg-blue-100", title: "Produtos de limpeza", desc: "Água sanitária, desinfetante, sabão em pó, detergente." },
-    { icon: Shirt, color: "text-indigo-600 bg-indigo-100", title: "Roupas", desc: "Camisas, calças e bermudas masculinas (novas ou usadas em bom estado)." },
-    { icon: BedSingleIcon, color: "text-purple-600 bg-purple-100", title: "Cama, mesa e banho", desc: "Lençóis, fronhas, toalhas, cobertores." },
-    { icon: Footprints, color: "text-slate-600 bg-slate-200", title: "Calçados", desc: "Tênis, sandálias e chinelos (preferencialmente masculinos)." },
+    { icon: Drumstick,    badgeBg: "bg-rose-100",   badgeIcon: "text-rose-600",   title: "Proteínas",           desc: "Carnes, frango, peixes, ovos, embutidos, enlatados em conserva, etc.",           bg: "/como-ajudar-proteinas-1",         bg2: "/como-ajudar-proteinas-2" },
+    { icon: SparklesIcon, badgeBg: "bg-teal-100",   badgeIcon: "text-teal-600",   title: "Higiene pessoal",     desc: "Sabonete, creme dental, escova de dente, papel higiênico, desodorante, etc.",  bg: "/como-ajudar-higiene-pessoal-1",   bg2: "/como-ajudar-higiene-pessoal-2" },
+    { icon: SparklesIcon, badgeBg: "bg-blue-100",   badgeIcon: "text-blue-600",   title: "Produtos de limpeza", desc: "Água sanitária, desinfetante, sabão em pó, detergente, esponjas, escovas, etc.", bg: "/como-ajudar-produtos-limpeza-1",  bg2: "/como-ajudar-produtos-limpeza-2" },
+    { icon: Shirt,        badgeBg: "bg-indigo-100", badgeIcon: "text-indigo-600", title: "Roupas",              desc: "Camisas, calças, bermudas e vestidos, novos ou usados em bom estado.",          bg: "/como-ajudar-roupas-1",           bg2: "/como-ajudar-roupas-2" },
+    { icon: Footprints,   badgeBg: "bg-slate-200",  badgeIcon: "text-slate-600",  title: "Calçados",            desc: "Tênis, sandálias e chinelos (preferencialmente masculinos).",               bg: "/como-ajudar-calcados-1",         bg2: "/como-ajudar-calcados-2" },
   ];
 
   const voluntariado = [
@@ -81,11 +85,11 @@ export default function ComoAjudarPage() {
       <section className="relative h-[65vh] flex items-center justify-center bg-black overflow-hidden">
         {/* Background Images Slider */}
         <div className="absolute inset-0 z-0">
-          {images.map((img, idx) => (
+          {heroImages.map((img, idx) => (
             <div
               key={idx}
               className={`absolute inset-0 bg-cover bg-center transition-all duration-[2000ms] ease-in-out ${
-                idx === currentImageIndex ? "opacity-100 scale-105" : "opacity-0 scale-100"
+                idx === currentHeroIndex ? "opacity-100 scale-105" : "opacity-0 scale-100"
               }`}
               style={{ backgroundImage: `url(${img})` }}
             />
@@ -127,52 +131,97 @@ export default function ComoAjudarPage() {
 
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+
+                  {/* Card 1: Alimentos não perecíveis — hover-based image fade */}
+                  <div
+                    className="relative rounded-[2rem] overflow-hidden min-h-[320px] flex flex-col justify-end"
+                    style={{ transition: "transform 0.3s ease, box-shadow 0.3s ease" }}
+                    onMouseEnter={e => {
+                      setAlimentosHovered(true);
+                      (e.currentTarget as HTMLElement).style.transform = "scale(1.03)";
+                      (e.currentTarget as HTMLElement).style.boxShadow = "0 20px 40px rgba(0,0,0,0.25)";
+                    }}
+                    onMouseLeave={e => {
+                      setAlimentosHovered(false);
+                      (e.currentTarget as HTMLElement).style.transform = "scale(1)";
+                      (e.currentTarget as HTMLElement).style.boxShadow = "";
+                    }}
+                  >
+                    {/* Image 1 — default */}
+                    <div
+                      className="absolute inset-0 bg-[#d1d5db] bg-cover bg-center transition-opacity duration-500 ease-in-out"
+                      style={{
+                        backgroundImage: `url(${resolveImg("/como-ajudar-alimentos-não-perecíveis-1")})`,
+                        opacity: alimentosHovered ? 0 : 1,
+                      }}
+                    />
+                    {/* Image 2 — shown on hover */}
+                    <div
+                      className="absolute inset-0 bg-[#d1d5db] bg-cover bg-center transition-opacity duration-500 ease-in-out"
+                      style={{
+                        backgroundImage: `url(${resolveImg("/como-ajudar-alimentos-não-perecíveis-2")})`,
+                        opacity: alimentosHovered ? 1 : 0,
+                      }}
+                    />
+                    {/* Gradient overlay */}
+                    <div
+                      className="absolute inset-0"
+                      style={{ background: "linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%)" }}
+                    />
+                    {/* Icon — absolute centre-left */}
+                    <div className="absolute top-1/2 -translate-y-1/2 left-7 z-10">
+                      <div className="w-11 h-11 rounded-2xl bg-amber-100 flex items-center justify-center">
+                        <PackageOpen className="w-6 h-6 text-amber-600" />
+                      </div>
+                    </div>
+                    {/* Text — bottom-left */}
+                    <div className="relative z-10 p-7">
+                      <h4 className="font-bold text-white text-lg leading-tight mb-1">Alimentos não perecíveis</h4>
+                      <p className="text-white/85 text-sm font-medium leading-relaxed">Arroz, feijão, açúcar, óleo, macarrão, leite em pó, etc.</p>
+                    </div>
+                  </div>
+
+                  {/* Cards 2–6: bg-1 always visible; bg-2 fades in on hover via group */}
                   {doacoes.map((item, idx) => {
                     const Icon = item.icon;
-                    const hasImage = cardImages[idx];
-
                     return (
-                      <div key={idx} className="bg-slate-50 border border-slate-200 rounded-[2.5rem] p-6 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col h-full">
-                        
-                        {/* Upload de Imagem */}
-                        <div 
-                          className={`relative w-full h-32 mb-6 rounded-3xl border-2 border-dashed transition-all overflow-hidden flex items-center justify-center cursor-pointer 
-                            ${hasImage ? 'border-transparent' : 'border-slate-300 bg-slate-100 group-hover:border-[#DE4A19] group-hover:bg-orange-50/30'}`}
-                          onClick={() => !hasImage && document.getElementById(`upload-${idx}`)?.click()}
-                        >
-                          {hasImage ? (
-                            <>
-                              <img src={hasImage} alt={item.title} className="w-full h-full object-cover" />
-                              <button 
-                                onClick={(e) => { e.stopPropagation(); handleRemoveImage(idx); }}
-                                className="absolute top-2 right-2 bg-black/60 hover:bg-red-500 text-white p-1.5 rounded-full transition-colors z-10"
-                              >
-                                <X className="w-4 h-4" />
-                              </button>
-                            </>
-                          ) : (
-                            <div className="flex flex-col items-center justify-center text-slate-400 group-hover:text-[#DE4A19] transition-colors">
-                              <Camera className="w-8 h-8 mb-2 opacity-60 group-hover:opacity-100" />
-                              <span className="text-[10px] font-bold uppercase tracking-widest">Adicionar foto</span>
-                            </div>
-                          )}
-                          <input 
-                            type="file" 
-                            id={`upload-${idx}`} 
-                            accept="image/png, image/jpeg, image/webp" 
-                            className="hidden" 
-                            onChange={(e) => handleImageUpload(idx, e)}
-                          />
+                      <div
+                        key={idx}
+                        className="group relative rounded-[2rem] overflow-hidden min-h-[320px] flex flex-col justify-end"
+                        style={{ transition: "transform 0.3s ease, box-shadow 0.3s ease" }}
+                        onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1.03)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 20px 40px rgba(0,0,0,0.25)"; }}
+                        onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1)"; (e.currentTarget as HTMLElement).style.boxShadow = ""; }}
+                      >
+                        {/* Image 1 — always visible */}
+                        <div
+                          className="absolute inset-0 bg-[#d1d5db] bg-cover bg-center"
+                          style={{ backgroundImage: `url(${resolveImg(item.bg)})` }}
+                        />
+                        {/* Image 2 — fades in on hover (shows only when file exists) */}
+                        <div
+                          className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"
+                          style={{ backgroundImage: `url(${resolveImg(item.bg2)})` }}
+                        />
+                        {/* Gradient overlay */}
+                        <div
+                          className="absolute inset-0"
+                          style={{ background: "linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%)" }}
+                        />
+                        {/* Icon — absolute centre-left */}
+                        <div className="absolute top-1/2 -translate-y-1/2 left-7 z-10">
+                          <div className={`w-11 h-11 rounded-2xl flex items-center justify-center ${item.badgeBg}`}>
+                            <Icon className={`w-6 h-6 ${item.badgeIcon}`} />
+                          </div>
                         </div>
-
-                        <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 mr-auto ${item.color}`}>
-                          <Icon className="w-7 h-7" />
+                        {/* Text — bottom-left */}
+                        <div className="relative z-10 p-7">
+                          <h4 className="font-bold text-white text-lg leading-tight mb-1">{item.title}</h4>
+                          <p className="text-white/85 text-sm font-medium leading-relaxed">{item.desc}</p>
                         </div>
-                        <h4 className="font-bold text-primary-dark text-lg mb-2 leading-tight">{item.title}</h4>
-                        <p className="text-slate-500 text-sm font-medium leading-relaxed mb-4">{item.desc}</p>
                       </div>
                     );
                   })}
+
                 </div>
 
                 <div className="bg-primary-dark text-white rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between shadow-2xl relative overflow-hidden">
@@ -184,12 +233,34 @@ export default function ComoAjudarPage() {
                      <div>
                        <p className="text-highlight font-bold uppercase tracking-widest text-xs mb-1">Local de entrega</p>
                        <p className="text-xl md:text-2xl font-bold mb-1">Rua Fragata, 100 — Petrópolis</p>
-                       <p className="text-slate-400 font-medium">Manaus/AM — Atendimento p/ Recebimento: <span className="text-white">Seg. a Sex. das 09h às 17h</span></p>
+                       <p className="text-slate-400 font-medium">Manaus/AM — Atendimento p/ Recebimento: <span className="text-white">Seg. a Sex. das 9h às 16h</span></p>
                      </div>
                    </div>
                    <button className="whitespace-nowrap bg-blue-500 hover:bg-teal-400 text-primary-dark font-bold px-8 py-4 rounded-xl transition-colors relative z-10 hidden md:block">
                      Ver no mapa
                    </button>
+                </div>
+                
+                {/* CTA Doações */}
+                <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left bg-slate-50 p-8 rounded-[2rem] border border-slate-200/50">
+                  <p className="text-slate-600 font-bold text-lg max-w-sm">
+                    Quer agendar a entrega ou tem dúvidas sobre doações?
+                  </p>
+                  <a 
+                    href="/contato" 
+                    className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20BD5A] text-white font-black px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-95"
+                  >
+                    <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      width="20" 
+                      height="20" 
+                      fill="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12.031 0C5.396 0 .012 5.385.01 12.022a11.966 11.966 0 0 0 1.61 5.952L0 24l6.196-1.624a11.986 11.986 0 0 0 5.836 1.517h.005c6.634 0 12.018-5.385 12.02-12.022A12.015 12.015 0 0 0 12.031 0zm0 21.849h-.004a9.98 9.98 0 0 1-5.077-1.385l-.364-.216-3.774.99.99-3.682-.236-.376a9.957 9.957 0 0 1-1.523-5.309c.002-5.503 4.484-9.986 9.989-9.986 2.668.001 5.176 1.042 7.061 2.929s2.925 4.394 2.924 7.06c-.002 5.505-4.485 9.985-9.986 9.985zm5.494-7.498c-.301-.151-1.78-.881-2.057-.981-.277-.101-.48-.152-.682.151-.202.302-.777.981-.952 1.181-.176.202-.352.227-.654.076a8.214 8.214 0 0 1-2.42-1.498 9.07 9.07 0 0 1-1.666-2.073c-.176-.303-.019-.467.132-.617.135-.135.302-.353.453-.531.152-.176.202-.301.303-.502.102-.202.051-.378-.025-.529-.076-.151-.682-1.644-.934-2.253-.245-.592-.494-.512-.681-.522-.177-.008-.378-.008-.579-.008s-.529.076-.806.378c-.277.302-1.059 1.035-1.059 2.525s1.085 2.925 1.236 3.125c.151.202 2.128 3.253 5.158 4.56.721.311 1.284.496 1.724.636.722.228 1.379.196 1.895.118.577-.087 1.78-.727 2.03-1.429.251-.703.251-1.306.176-1.432-.075-.126-.276-.201-.577-.352z"/>
+                    </svg>
+                    Fale conosco
+                  </a>
                 </div>
               </section>
 
@@ -228,63 +299,59 @@ export default function ComoAjudarPage() {
                        </div>
                      </div>
                   </div>
+                </div>
 
+                {/* CTA Financeiro */}
+                <div className="mt-12 pt-8 border-t border-teal-100/50 flex flex-col items-center text-center">
+                  <p className="text-slate-600 font-bold text-lg mb-6 max-w-md">
+                    Precisa de recibo de doação ou quer contribuir mensalmente?
+                  </p>
+                  <a 
+                    href="/contato" 
+                    className="inline-flex items-center bg-[#DE4A19] hover:bg-[#C53D12] text-white font-black px-10 py-4 rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-95"
+                  >
+                    Entre em contato
+                  </a>
                 </div>
               </section>
 
-              {/* Voluntariado & Formulário */}
-              <section id="voluntariado" className="bg-primary-dark text-white rounded-3xl p-8 md:p-10 shadow-xl overflow-hidden relative">
-                <div className="grid lg:grid-cols-2 gap-16 relative z-10">
-                  <div className="space-y-8">
+              {/* Voluntariado */}
+              <section id="voluntariado" className="bg-primary-dark text-white rounded-3xl p-8 md:p-12 shadow-xl overflow-hidden relative">
+                <div className="max-w-4xl mx-auto space-y-12 relative z-10">
+                  <div className="text-center space-y-8">
                     <h2 className="text-4xl font-bold text-white leading-tight">Voluntariado</h2>
+                    <p className="text-lg text-slate-300 font-medium leading-relaxed max-w-3xl mx-auto">Nosso trabalho só é possível graças ao engajamento de voluntários que doam seu tempo e conhecimento. Se você tem habilidades em alguma das áreas abaixo, junte-se à nossa equipe.</p>
                     
-                    <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 group">
-                      <img 
-                        src="/Como-ajudar-voluntarios-1.png" 
-                        alt="Nossos Voluntários" 
-                        className="w-full h-48 object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
-                      />
-                      <div className="absolute inset-0 bg-primary-dark/20 group-hover:bg-transparent transition-colors"></div>
-                    </div>
-
-                    <p className="text-lg text-slate-300 font-medium leading-relaxed">Nosso trabalho só é possível graças ao engajamento de voluntários que doam seu tempo e conhecimento. Se você tem habilidades em alguma das áreas abaixo, junte-se à nossa equipe.</p>
-                    
-                    <div className="bg-primary-dark border border-slate-700 rounded-3xl p-6 shadow-inner">
-                      <p className="font-bold text-sm text-slate-400 uppercase tracking-widest mb-4">Áreas disponíveis:</p>
-                      <div className="flex flex-wrap gap-2">
+                    <div className="bg-primary-dark border border-slate-700/50 rounded-3xl p-8 shadow-inner max-w-3xl mx-auto">
+                      <p className="font-bold text-sm text-slate-400 uppercase tracking-widest mb-6">Áreas disponíveis:</p>
+                      <div className="flex flex-wrap justify-center gap-3">
                         {voluntariado.map((vol, i) => (
-                          <span key={i} className="bg-primary-dark border border-slate-700 text-teal-100 text-xs px-3 py-1.5 rounded-md cursor-default">{vol}</span>
+                          <span key={i} className="bg-slate-800/50 border border-slate-700 text-teal-100 text-xs px-4 py-2 rounded-lg cursor-default shadow-sm hover:border-teal-500/30 transition-colors uppercase font-bold tracking-wider">{vol}</span>
                         ))}
                       </div>
                     </div>
                   </div>
 
-                  <form className="bg-white rounded-3xl p-8 shadow-2xl relative text-primary-dark">
-                    
-                    
-                    <h3 className="text-2xl font-bold text-primary-dark mb-8">Central de Recrutamento</h3>
-                    
-                    <div className="grid sm:grid-cols-1 gap-4 mb-6">
-                      <div>
-                        <label className="block text-sm font-bold text-slate-700 mb-2">Nome Completo (RG)</label>
-                        <input type="text" disabled placeholder="Maria Silva" className="w-full bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl focus:outline-none opacity-60 cursor-not-allowed" />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-bold text-slate-700 mb-2">Linha Telefônica (WhatsApp)</label>
-                        <input type="text" disabled placeholder="(92) 99000-0000" className="w-full bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl focus:outline-none opacity-60 cursor-not-allowed" />
-                      </div>
-                      <div>
-                         <label className="block text-sm font-bold text-slate-700 mb-2">Área de interesse</label>
-                        <select disabled className="w-full bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl focus:outline-none opacity-60 cursor-not-allowed appearance-none">
-                          <option>Selecione uma especialidade...</option>
-                        </select>
-                      </div>
-                    </div>
-                    
-                     <button disabled className="w-full bg-primary-dark text-white font-bold py-4 rounded-xl mt-4 opacity-50 cursor-not-allowed flex items-center justify-center uppercase tracking-widest text-sm transition-all hover:bg-slate-700">
-                      Enviar cadastro <ChevronRight className="w-5 h-5 ml-2" />
-                    </button>
-                  </form>
+                  <div className="relative rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-white/10 group">
+                    <img 
+                      src="/Como-ajudar-voluntarios-1.png" 
+                      alt="Nossos Voluntários" 
+                      className="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-all duration-700 scale-100 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/60 via-transparent to-transparent"></div>
+                  </div>
+
+                  <div className="flex flex-col items-center text-center space-y-8 pt-4">
+                    <p className="text-2xl md:text-3xl text-white font-bold max-w-xl leading-snug">
+                      Quer fazer parte da nossa equipe de voluntários?
+                    </p>
+                    <a 
+                      href="/contato" 
+                      className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20BD5A] text-white font-black px-12 py-5 rounded-2xl transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 active:scale-95 text-lg"
+                    >
+                      Quero ser voluntário
+                    </a>
+                  </div>
                 </div>
               </section>
 
@@ -296,14 +363,16 @@ export default function ComoAjudarPage() {
                   <div>
                     <Briefcase className="w-12 h-12 text-blue-600 mb-6 group-hover:scale-110 transition-transform origin-left" />
                      <h3 className="text-3xl font-bold text-primary-dark mb-4">Central de Estágios</h3>
-                    <p className="text-slate-600 leading-relaxed font-medium mb-8">Oferecemos oportunidades de estágio supervisionado nas áreas de Serviço Social, Psicologia, Administração, Direito e Pedagogia. Nossos estagiários têm experiência prática no atendimento a pessoas em situação de vulnerabilidade, com supervisão técnica registrada no CRESS e CRP.</p>
-                    <div className="bg-blue-50 border border-blue-100 text-blue-800 px-4 py-3 rounded-lg text-sm font-bold shadow-sm mb-8 inline-block hidden">
-                      A instituição mantém supervisão contínua 100% amparada pelas assinaturas técnicas do <strong>CRESS e CRP</strong> estaduais.
+                    <p className="text-slate-600 leading-relaxed font-medium mb-8">Oferecemos oportunidades de estágio supervisionado nas áreas de Serviço Social, Psicologia, Administração e Pedagogia. Nossos estagiários têm experiência prática no atendimento a pessoas em situação de vulnerabilidade social.</p>
+                    <div className="mt-8 space-y-4">
+                      <p className="text-slate-600 font-bold text-base">Envie seu currículo e manifeste interesse:</p>
+                      <a 
+                        href="/contato" 
+                        className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-black px-6 py-3 rounded-xl transition-all shadow-md hover:shadow-lg active:scale-95"
+                      >
+                        Candidatar-me a estágio
+                      </a>
                     </div>
-                  </div>
-                  <div>
-                    <p className="text-xs uppercase font-bold text-slate-400 tracking-widest mb-2">Envie seu Currículo em PDF:</p>
-                    <a href="mailto:contato@desafiojovemmanaus.org.br" className="text-lg font-black text-blue-600 hover:text-blue-800 transition-colors break-words">contato@desafiojovemmanaus.org.br</a>
                   </div>
                 </section>
 
@@ -317,10 +386,7 @@ export default function ComoAjudarPage() {
                     <h3 className="text-3xl font-bold mb-4">Parcerias B2B</h3>
                     <p className="text-teal-50 leading-relaxed font-medium mb-6">Empresas podem contribuir de diferentes formas: doações regulares de produtos, repasses financeiros ou destinação de valores de penas pecuniárias.</p>
                     
-                    <div className="bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/20 mb-8">
-                      <h4 className="font-bold text-yellow-300 mb-2 uppercase tracking-wider text-xs flex items-center">Tribunal de Justiça do Estado do Amazonas</h4>
-                      <p className="text-sm font-medium hover:text-white transition-colors">Chancela da absorção e destinação de sentenças de <strong>Penas Pecuniárias na VEMEPA</strong> à causa.</p>
-                    </div>
+
                   </div>
 
                   <div className="relative z-10">
@@ -340,6 +406,14 @@ export default function ComoAjudarPage() {
                 <div className="px-6 py-4 bg-slate-50 border-2 border-dashed border-slate-200 rounded-xl text-slate-400 font-bold uppercase tracking-widest text-sm">
                   Horários de visita e orientações serão divulgados em breve. Entre em contato para mais informações.
                 </div>
+                <div className="mt-8">
+                  <a 
+                    href="/contato" 
+                    className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-black px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-95"
+                  >
+                    Agendar visita
+                  </a>
+                </div>
               </section>
 
             </div>
@@ -351,6 +425,10 @@ export default function ComoAjudarPage() {
   );
 }
 
-// Mini Icons helper
-const SparklesIcon = (props: any) => (<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="m12 3-1.9 5.8a2 2 0 0 1-1.29 1.29L3 12l5.8 1.9a2 2 0 0 1 1.29 1.29L12 21l1.9-5.8a2 2 0 0 1-1.29-1.29L21 12l-5.8-1.9a2 2 0 0 1-1.29-1.29L12 3Z"/></svg>);
-const BedSingleIcon = (props: any) => (<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M3 20v-8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8"/><path d="M5 10V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"/><path d="M3 18h18"/></svg>);
+// Inline icon helper (no lucide equivalent for "sparkles/cleaning")
+const SparklesIcon = (props: any) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <path d="m12 3-1.9 5.8a2 2 0 0 1-1.29 1.29L3 12l5.8 1.9a2 2 0 0 1 1.29 1.29L12 21l1.9-5.8a2 2 0 0 1-1.29-1.29L21 12l-5.8-1.9a2 2 0 0 1-1.29-1.29L12 3Z"/>
+  </svg>
+);
+
