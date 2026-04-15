@@ -60,9 +60,10 @@ export default function QuemSomosPage() {
       
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center bg-primary overflow-hidden">
-        <div className="absolute inset-0 z-0 flex items-center justify-center bg-primary-dark">
-          <ImageIcon className="w-16 h-16 text-white/20" />
-          <span className="text-white/40 font-bold ml-4 uppercase tracking-widest">[ Imagem da Fachada / Grupo ]</span>
+        <div 
+          className="absolute inset-0 z-0 bg-cover bg-center" 
+          style={{ backgroundImage: "url('/quem-somos-hero.png')" }}
+        >
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/80 to-transparent z-10"></div>
         <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">

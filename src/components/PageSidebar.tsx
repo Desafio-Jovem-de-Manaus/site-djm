@@ -45,6 +45,19 @@ export default function PageSidebar({ items }: PageSidebarProps) {
     };
   }, [items]);
 
+  const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, anchor: string) => {
+    e.preventDefault();
+    const element = document.getElementById(anchor);
+    if (element) {
+      const offsetTop = element.getBoundingClientRect().top + window.scrollY - 120; // 120px offset
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth"
+      });
+      window.history.pushState(null, "", `#${anchor}`);
+    }
+  };
+
   return (
     <div className="lg:sticky lg:top-32 w-full lg:w-auto z-20">
       
@@ -56,6 +69,7 @@ export default function PageSidebar({ items }: PageSidebarProps) {
             <a
               key={idx}
               href={`#${item.anchor}`}
+              onClick={(e) => handleScrollToSection(e, item.anchor)}
               className={`flex-shrink-0 flex items-center px-4 py-3 rounded-xl transition-all font-semibold whitespace-nowrap ${
                 isActive 
                   ? "bg-white shadow-sm text-primary border border-slate-100 ring-1 ring-primary/10" 
@@ -81,6 +95,7 @@ export default function PageSidebar({ items }: PageSidebarProps) {
             <a
               key={idx}
               href={`#${item.anchor}`}
+              onClick={(e) => handleScrollToSection(e, item.anchor)}
               className={`flex items-center p-3 rounded-lg transition-all font-semibold ${
                 isActive 
                   ? "bg-white shadow-sm text-primary ring-1 ring-slate-100 shadow-primary/5" 
