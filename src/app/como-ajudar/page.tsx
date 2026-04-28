@@ -6,7 +6,7 @@ import {
   MapPin, HandCoins, Heart, Briefcase, Handshake,
   Landmark, Package, HandHeart, GraduationCap, Clock, Footprints,
   Users, Building2, Mail, ChevronRight, X, MousePointerClick, 
-  ArrowLeft, ArrowUp, Loader2, Send
+  ArrowLeft, ArrowUp, Loader2, Send, MessageCircle, Calendar, UserCheck
 } from "lucide-react";
 import PageSidebar from "@/components/PageSidebar";
 
@@ -48,7 +48,7 @@ export default function ComoAjudarPage() {
       id: "voluntariado-card",
       title: "Ser voluntário(a)",
       description: "Doe seu tempo e habilidades",
-      icon: Users,
+      icon: HandHeart,
       classes: "bg-blue-50 text-blue-600",
       whatsappLabel: "Voluntariado"
     },
@@ -72,7 +72,7 @@ export default function ComoAjudarPage() {
       id: "visita",
       title: "Agendar uma visita",
       description: "Conheça nosso trabalho de perto",
-      icon: Clock,
+      icon: Calendar,
       classes: "bg-orange-50 text-orange-600",
       whatsappLabel: "Visita Institucional"
     },
@@ -80,7 +80,7 @@ export default function ComoAjudarPage() {
       id: "outro",
       title: "Outro assunto",
       description: "Outras formas de colaboração",
-      icon: Mail,
+      icon: MessageCircle,
       classes: "bg-purple-50 text-purple-600",
       whatsappLabel: "Outra forma de colaboração"
     }
@@ -226,11 +226,12 @@ export default function ComoAjudarPage() {
 
   const sidebarItems = [
     { label: "Doações materiais", anchor: "doacoes-materiais", icon: <Package className="w-5 h-5" /> },
-    { label: "Doação financeira", anchor: "doacao-financeira", icon: <Heart className="w-5 h-5" /> },
+    { label: "Doação financeira", anchor: "doacao-financeira", icon: <HandCoins className="w-5 h-5" /> },
     { label: "Voluntariado", anchor: "voluntariado", icon: <HandHeart className="w-5 h-5" /> },
     { label: "Estágios", anchor: "estagios", icon: <GraduationCap className="w-5 h-5" /> },
-    { label: "Parcerias empresariais", anchor: "parcerias-empresariais", icon: <Handshake className="w-5 h-5" /> },
-    { label: "Visitas", anchor: "visitas", icon: <Clock className="w-5 h-5" /> },
+    { label: "Parcerias empresariais", anchor: "parcerias-empresariais", icon: <Building2 className="w-5 h-5" /> },
+    { label: "Visitas", anchor: "visitas", icon: <Calendar className="w-5 h-5" /> },
+    { label: "Como Você Quer Contribuir?", anchor: "contato", icon: <MessageCircle className="w-5 h-5" /> },
   ];
 
   // Donation cards — 6 items ("Cama, mesa e banho" removed)
@@ -290,14 +291,14 @@ export default function ComoAjudarPage() {
               <PageSidebar items={sidebarItems} />
             </div>
 
-            {/* Coluna Principal de Conteúdo */}
+{/* Coluna Principal de Conteúdo */}
             <div className="lg:col-span-9 space-y-24 pb-20">
 
               {/* Doações de Materiais */}
               <section id="doacoes-materiais" className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-200">
                 <div className="text-center mb-16 max-w-3xl mx-auto">
-                  <h2 className="text-4xl font-bold text-primary-dark mb-6 flex items-center justify-center">
-                    <Package className="w-10 h-10 text-primary mr-4 flex-shrink-0" /> Doações Materiais
+                  <h2 onClick={() => scrollToContatoAndSelect("doacao")} className="text-4xl font-bold text-primary-dark mb-6 flex items-center justify-center cursor-pointer group hover:opacity-75 transition-opacity">
+                    <Package className="w-10 h-10 text-primary mr-4 flex-shrink-0 group-hover:scale-110 transition-transform" /> Doações Materiais
                   </h2>
                   <p className="text-lg text-slate-600 font-medium">Mantemos quatro programas ativos que atendem diariamente dezenas de pessoas em situação de vulnerabilidade. Para garantir o funcionamento contínuo dos serviços, precisamos de doações regulares dos seguintes itens:</p>
                 </div>
@@ -409,9 +410,14 @@ export default function ComoAjudarPage() {
                        <p className="text-slate-400 font-medium">Manaus/AM — Atendimento p/ Recebimento: <span className="text-white">Seg. a Sex. das 9h às 16h</span></p>
                      </div>
                    </div>
-                   <button className="whitespace-nowrap bg-blue-500 hover:bg-teal-400 text-primary-dark font-bold px-8 py-4 rounded-xl transition-colors relative z-10 hidden md:block">
+                   <a
+                     href="https://www.google.com/maps/search/?api=1&query=Rua+Fragata+100+Petrópolis+Manaus+AM"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="whitespace-nowrap bg-blue-500 hover:bg-teal-400 text-primary-dark font-bold px-8 py-4 rounded-xl transition-colors relative z-10 hidden md:block"
+                   >
                      Ver no mapa
-                   </button>
+                   </a>
                 </div>
                 
                 {/* CTA Doações */}
@@ -442,8 +448,8 @@ export default function ComoAjudarPage() {
 
                 {/* Cabeçalho */}
                 <div className="mb-10">
-                  <h2 className="text-4xl font-bold text-primary-dark mb-4 flex items-center">
-                    <HandCoins className="w-10 h-10 text-primary mr-4 flex-shrink-0" /> Doação Financeira
+                  <h2 onClick={() => scrollToContatoAndSelect("doacao")} className="text-4xl font-bold text-primary-dark mb-4 flex items-center cursor-pointer group hover:opacity-75 transition-opacity">
+                    <HandCoins className="w-10 h-10 text-primary mr-4 flex-shrink-0 group-hover:scale-110 transition-transform" /> Doação Financeira
                   </h2>
                   <p className="text-xl text-slate-600 font-medium leading-relaxed max-w-3xl">Sua doação financeira garante a continuidade dos nossos serviços e amplia o número de pessoas atendidas. Você pode fazer uma doação única ou contribuir mensalmente.</p>
                 </div>
@@ -591,8 +597,8 @@ export default function ComoAjudarPage() {
 
                   {/* Título + texto intro */}
                   <div>
-                    <h2 className="text-4xl font-bold text-white leading-tight mb-4 flex items-center">
-                      <HandHeart className="w-10 h-10 text-teal-400 mr-4 flex-shrink-0" /> Voluntariado
+                    <h2 onClick={() => scrollToContatoAndSelect("voluntariado-card")} className="text-4xl font-bold text-white leading-tight mb-4 flex items-center cursor-pointer group hover:opacity-75 transition-opacity">
+                      <HandHeart className="w-10 h-10 text-teal-400 mr-4 flex-shrink-0 group-hover:scale-110 transition-transform" /> Voluntariado
                     </h2>
                     <p className="text-lg text-slate-300 font-medium leading-relaxed max-w-3xl">Voluntários ampliam nosso alcance e melhoram a qualidade do atendimento que oferecemos. Com seu tempo e conhecimento, podemos atender mais pessoas e fortalecer nossa missão. Se você tem habilidades em alguma das áreas abaixo, junte-se à nossa equipe.</p>
                   </div>
@@ -641,10 +647,15 @@ export default function ComoAjudarPage() {
               <div className="grid md:grid-cols-2 gap-8">
 
                 {/* Estágios */}
-                <section id="estagios" className="bg-white p-10 rounded-3xl shadow-sm border border-slate-200 flex flex-col justify-between group">
+                <section id="estagios" className="bg-white p-10 rounded-3xl shadow-sm border border-slate-200 flex flex-col justify-between relative overflow-hidden group">
+                  <div className="absolute -bottom-10 -right-10 opacity-10 group-hover:scale-110 transition-transform">
+                    <UserCheck className="w-64 h-64 text-blue-600" />
+                  </div>
                   <div>
-                    <Briefcase className="w-12 h-12 text-blue-600 mb-6 group-hover:scale-110 transition-transform origin-left" />
-                    <h3 className="text-3xl font-bold text-primary-dark mb-4">Estágios</h3>
+                    <button onClick={() => scrollToContatoAndSelect("estagio")} className="cursor-pointer hover:scale-110 transition-transform mb-6 p-0 bg-transparent border-0 origin-left block">
+                      <GraduationCap className="w-12 h-12 text-blue-600" />
+                    </button>
+                    <h3 onClick={() => scrollToContatoAndSelect("estagio")} className="text-3xl font-bold text-primary-dark mb-4 cursor-pointer hover:opacity-75 transition-opacity">Estágios</h3>
                     <p className="text-slate-600 leading-relaxed font-medium mb-4">Oferecemos oportunidades de estágio curricular não remunerado nas áreas de Serviço Social, Psicologia, Administração e Pedagogia. Nossos estagiários têm experiência prática no atendimento a pessoas em situação de vulnerabilidade social.</p>
                     <p className="text-slate-500 leading-relaxed font-medium mb-8">Os detalhes sobre carga horária, período e requisitos específicos são tratados individualmente com cada estagiário e seu orientador acadêmico. Verifique com seu professor de estágio se nossa instituição atende aos requisitos do seu curso ou entre em contato direto conosco para mais informações.</p>
                     <div className="space-y-4">
@@ -666,8 +677,10 @@ export default function ComoAjudarPage() {
                     <Handshake className="w-64 h-64" />
                   </div>
                   <div className="relative z-10 mb-8">
-                    <Handshake className="w-12 h-12 text-teal-300 mb-6" />
-                    <h3 className="text-3xl font-bold mb-4">Parcerias Empresariais</h3>
+                    <button onClick={() => scrollToContatoAndSelect("parceria")} className="cursor-pointer hover:scale-110 transition-transform mb-6 p-0 bg-transparent border-0 block">
+                      <Building2 className="w-12 h-12 text-teal-300" />
+                    </button>
+                    <h3 onClick={() => scrollToContatoAndSelect("parceria")} className="text-3xl font-bold mb-4 cursor-pointer hover:opacity-75 transition-opacity">Parcerias Empresariais</h3>
                     <p className="text-teal-100 font-medium mb-4">Empresas podem contribuir de diversas formas para fortalecer nosso trabalho:</p>
                     <ul className="space-y-2 mb-6">
                       {[
@@ -698,10 +711,11 @@ export default function ComoAjudarPage() {
               </div>
 
               {/* Visitas Institucionais */}
-              <section id="visitas" className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-200">
-                <div className="flex flex-col items-center text-center max-w-2xl mx-auto py-8">
-                  <Clock className="w-14 h-14 text-slate-300 mb-6" />
-                  <h2 className="text-3xl font-bold text-primary-dark mb-4">Visitas</h2>
+              <section id="visitas" className="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-200">
+                <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
+                  <h2 onClick={() => scrollToContatoAndSelect("visita")} className="text-3xl font-bold text-primary-dark mb-4 flex items-center justify-center cursor-pointer group hover:opacity-75 transition-opacity">
+                    <Calendar className="w-10 h-10 text-slate-300 mr-4 flex-shrink-0 group-hover:scale-110 transition-transform" /> Visitas
+                  </h2>
                   <p className="text-lg text-slate-600 font-medium leading-relaxed mb-4">Visitas agendadas fortalecem o vínculo entre a comunidade e nosso trabalho. Conheça de perto a realidade da instituição, veja as necessidades que atendemos diariamente e entenda o alcance de nossas ações.</p>
                   <p className="text-base text-slate-500 font-medium leading-relaxed mb-8">Os horários de visita são flexíveis e definidos por agendamento individual. Entre em contato conosco para agendar sua visita.</p>
                   <button
@@ -734,7 +748,7 @@ export default function ComoAjudarPage() {
                       return (
                         <button 
                           key={card.id}
-                          onClick={() => setSelectedContribution(card)}
+                          onClick={() => scrollToContatoAndSelect(card.id)}
                           className={`w-full flex items-center p-6 rounded-[2rem] border-2 transition-all duration-300 group relative ${
                             isSelected 
                             ? "border-teal-400 bg-white" 
