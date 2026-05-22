@@ -3,9 +3,9 @@ import PageSidebar from "@/components/PageSidebar";
 
 export default function ParceirosPage() {
   const sidebarItems = [
-    { label: "Parceiros governamentais", anchor: "parceiros-governamentais", icon: <Landmark className="w-5 h-5" /> },
     { label: "Parceiros empresariais", anchor: "parceiros-empresariais", icon: <Briefcase className="w-5 h-5" /> },
     { label: "Parceiros institucionais", anchor: "parceiros-institucionais", icon: <Building2 className="w-5 h-5" /> },
+    { label: "Parceiros governamentais", anchor: "parceiros-governamentais", icon: <Landmark className="w-5 h-5" /> },
   ];
 
   const governamentais = [
@@ -105,22 +105,6 @@ export default function ParceirosPage() {
             {/* Coluna Principal de Conteúdo */}
             <div className="lg:col-span-9 space-y-24 pb-20">
 
-              {/* Perceiros Governamentais */}
-              <section id="parceiros-governamentais" className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-200 scroll-mt-32">
-                <div className="mb-10">
-                  <h2 className="text-3xl font-black text-primary-dark tracking-tight flex items-center mb-4 border-b-2 border-slate-100 pb-4">
-                    <Landmark className="w-8 h-8 text-blue-700 mr-4" /> Parceiros Governamentais
-                  </h2>
-                  <p className="text-lg text-slate-500 font-medium max-w-3xl">Onde o poder público precisa chegar e nem sempre consegue, o DJM está — reconhecido pelo Estado como parceiro estratégico na execução de serviços essenciais. Por meio de parcerias e termos de fomento, investem na nossa atuação como extensão das políticas públicas do Amazonas.</p>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                   {governamentais.map((item, idx) => (
-                     <ParceiroCard key={`gov-${idx}`} title={item.title} subtitle={item.subtitle} image={item.image} />
-                   ))}
-                </div>
-              </section>
-
               {/* Parceiros Empresariais */}
               <section id="parceiros-empresariais" className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-200 scroll-mt-32">
                 <div className="mb-10">
@@ -149,6 +133,22 @@ export default function ParceirosPage() {
                 <div className="grid md:grid-cols-2 gap-6">
                    {institucionais.map((item, idx) => (
                      <ParceiroCard key={`inst-${idx}`} title={item.title} desc={item.desc} image={item.image} url={item.url} />
+                   ))}
+                </div>
+              </section>
+
+              {/* Parceiros Governamentais */}
+              <section id="parceiros-governamentais" className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-200 scroll-mt-32">
+                <div className="mb-10">
+                  <h2 className="text-3xl font-black text-primary-dark tracking-tight flex items-center mb-4 border-b-2 border-slate-100 pb-4">
+                    <Landmark className="w-8 h-8 text-blue-700 mr-4" /> Parceiros Governamentais
+                  </h2>
+                  <p className="text-lg text-slate-500 font-medium max-w-3xl">Onde o poder público precisa chegar e nem sempre consegue, o DJM está — reconhecido pelo Estado como parceiro estratégico na execução de serviços essenciais. Por meio de parcerias e termos de fomento, investem na nossa atuação como extensão das políticas públicas do Amazonas.</p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                   {governamentais.map((item, idx) => (
+                     <ParceiroCard key={`gov-${idx}`} title={item.title} subtitle={item.subtitle} image={item.image} />
                    ))}
                 </div>
               </section>
