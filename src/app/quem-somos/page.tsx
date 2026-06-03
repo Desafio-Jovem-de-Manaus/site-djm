@@ -31,28 +31,27 @@ export default function QuemSomosPage() {
   ];
 
   const diretoria = [
-    { name: "Francisco Carlos da Silva Salgado", role: "Presidente", course: "Teologia" },
-    { name: "Rosiane Silva de Menezes", role: "Vice-presidente", course: "Serviço Social" },
-    { name: "Danielle Nascimento dos Santos", role: "1ª Tesoureira", course: "Psicologia" },
-    { name: "Adenauer de Oliveira Queiroz", role: "2º Tesoureiro", course: "Direito" },
-    { name: "Priscilla Leão Rabelo", role: "1ª Secretária", course: "Publicidade" },
-    { name: "Francisco Eraldo da Silva", role: "2º Secretário", course: "Mecânica" },
+    { name: "Francisco Carlos da Silva Salgado", role: "Presidente", course: "Pastor Teólogo" },
+    { name: "Rosiane Silva de Menezes", role: "Vice-presidente", course: "Assistente Social" },
+    { name: "Danielle Nascimento dos Santos", role: "1ª Tesoureira", course: "Psicóloga" },
+    { name: "Adenauer de Oliveira Queiroz", role: "2º Tesoureiro", course: "Empresário" },
+    { name: "Priscilla Leão Rabelo", role: "1ª Secretária", course: "Publicista" },
+    { name: "Francisco Eraldo da Silva", role: "2º Secretário", course: "Técnico em Mecânica" },
   ];
 
   const equipe = [
-    "Diretora Executiva (Psicóloga)",
-    "Coordenador Geral / Gerente Assistencial (Administrador)",
-    "Administrador",
-    "2 Assistentes Sociais",
-    "2 Psicólogos",
-    "Coordenadora de Abordagem Social (Asst. Social)",
-    "4 Educadores Sociais",
-    "2 Abordadores Sociais",
-    "Pedagoga / Supervisora",
-    "Auxiliares Administrativos",
+    "Direção",
+    "Coordenação Geral",
+    "Coordenação Financeira e de Projetos",
+    "Coordenações de Serviços",
+    "Setor Administrativo / Jurídico",
+    "Assistentes Sociais",
+    "Psicólogos",
+    "Educadores Sociais",
+    "Abordadores Sociais",
+    "Pedagoga",
     "Oficineiros",
-    "Coordenador Logístico",
-    "Auxiliar de Cozinha"
+    "Cozinheiro"
   ];
 
   return (
@@ -149,7 +148,7 @@ export default function QuemSomosPage() {
                 <MissaoVisaoValores />
                 <div className="bg-slate-50 pb-10 pt-4 text-center px-8">
                   <p className="max-w-3xl mx-auto text-sm md:text-base font-bold text-slate-600 uppercase tracking-widest border border-slate-200 py-4 px-6 rounded-xl bg-white shadow-sm">
-                    <strong>Finalidade Estatutária:</strong> Promover educação, capacitação, assistência social, saúde física e psicológica, acolhimento, prevenção e recuperação.
+                    <strong>Finalidade Estatutária:</strong> Promover educação, capacitação, assistência social, saúde física e psicológica, acolhimento, prevenção e recuperação para dependentes químicos.
                   </p>
                 </div>
               </section>
@@ -177,7 +176,7 @@ export default function QuemSomosPage() {
               <section id="equipe" className="scroll-mt-[100px] bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-200">
                 <h2 className="text-3xl font-bold text-primary-dark mb-3 border-l-4 border-primary pl-4">Nossa Equipe Técnica</h2>
                 <p className="text-slate-600 mb-10 max-w-3xl leading-relaxed font-medium">
-                  A organização conta com mais de 23 profissionais fixos em sua base. A equipe técnica matriz central é composta por 3 psicólogos, 3 assistentes sociais e 1 pedagoga, todos com experiência diária no Terceiro Setor.
+                  A organização conta com mais de 20 profissionais atuando em seus diversos serviços. A equipe técnica é composta por psicólogos, assistentes sociais, pedagoga, profissionais do direito e de gestão, todos com relevante experiência na execução das atividades da instituição.
                 </p>
 
                 <div className="flex flex-wrap gap-3">
@@ -200,31 +199,35 @@ export default function QuemSomosPage() {
                     <div className="space-y-3 text-slate-300">
                       <div className="flex items-center p-4 bg-slate-700/50 rounded-xl hover:bg-slate-700 transition-colors">
                          <MapPin className="w-6 h-6 text-highlight mr-4 flex-shrink-0" />
-                         <span className="font-medium text-white">Sede própria extensa no bairro Petrópolis</span>
+                         <span className="font-medium text-white">Sede própria no bairro Petrópolis</span>
                       </div>
                       <div className="flex items-center p-4 bg-slate-700/50 rounded-xl hover:bg-slate-700 transition-colors">
                          <Bed className="w-6 h-6 text-highlight mr-4 flex-shrink-0" />
-                         <span className="font-medium text-white">10 dormitórios climatizados completos</span>
+                         <span className="font-medium text-white">10 dormitórios climatizados</span>
                       </div>
                       <div className="flex items-center p-4 bg-slate-700/50 rounded-xl hover:bg-slate-700 transition-colors">
                          <Users className="w-6 h-6 text-highlight mr-4 flex-shrink-0" />
-                         <span className="font-medium text-white">Residência de 50 vagas prontas</span>
+                         <span className="font-medium text-white">Refeitório e Salão de Convivência</span>
                       </div>
                       <div className="flex items-center p-4 bg-slate-700/50 rounded-xl hover:bg-slate-700 transition-colors">
                          <Utensils className="w-6 h-6 text-highlight mr-4 flex-shrink-0" />
-                         <span className="font-medium text-white">Salão de Convivência e Cozinha Industrial</span>
+                         <span className="font-medium text-white">Cozinha Industrial</span>
                       </div>
                       <div className="flex items-center p-4 bg-slate-700/50 rounded-xl hover:bg-slate-700 transition-colors">
                          <Award className="w-6 h-6 text-highlight mr-4 flex-shrink-0" />
-                         <span className="font-medium text-white">Consultórios Psicológicos e Clínicos</span>
+                         <span className="font-medium text-white">Salas de Atendimento Psicossocial</span>
                       </div>
                       <div className="flex items-center p-4 bg-slate-700/50 rounded-xl hover:bg-slate-700 transition-colors">
-                         <Laptop className="w-6 h-6 text-highlight mr-4 flex-shrink-0" />
-                         <span className="font-medium text-white">Laboratório de Informática (17 computadores)</span>
+                         <BookOpen className="w-6 h-6 text-highlight mr-4 flex-shrink-0" />
+                         <span className="font-medium text-white">Salas de Aula Multiuso para Oficinas e Atividades Coletivas</span>
                       </div>
                       <div className="flex items-center p-4 bg-slate-700/50 rounded-xl hover:bg-slate-700 transition-colors">
                          <Car className="w-6 h-6 text-highlight mr-4 flex-shrink-0" />
-                         <span className="font-medium text-white">Frota Operacional: 5 veículos fixos</span>
+                         <span className="font-medium text-white">Frota Operacional: 5 veículos</span>
+                      </div>
+                      <div className="flex items-center p-4 bg-slate-700/50 rounded-xl hover:bg-slate-700 transition-colors">
+                         <Building className="w-6 h-6 text-highlight mr-4 flex-shrink-0" />
+                         <span className="font-medium text-white">Salas para Atividades Administrativas e Operacional</span>
                       </div>
                     </div>
 
@@ -237,7 +240,7 @@ export default function QuemSomosPage() {
                 </div>
               </section>
 
-              {/* Quem nos apoia (Parceiros) */}
+              {/* Parceiros Que Apoiam Nosso Trabalho */}
               <section id="parceiros" className="scroll-mt-[100px] bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
                 <PartnersCarousel />
               </section>
@@ -257,7 +260,7 @@ export default function QuemSomosPage() {
                 
                 <h2 className="text-3xl font-bold mb-4 relative z-10">Títulos de Utilidade Pública</h2>
                 <p className="text-teal-100 text-lg font-medium max-w-2xl mb-10 relative z-10">
-                  O selo de Utilidade Pública atesta o valor irrefutável e a seriedade absoluta dos serviços prestados pelo DJM à população da Amazônia de forma contínua desde as décadas de 80 e 90, sendo validado pelas esferas do poder.
+                  Os Títulos de Utilidade Pública reconhecem o compromisso do DJM com a prestação contínua de serviços à população de Manaus e do Amazonas. Concedidos pelos poderes municipal, estadual e federal, esses títulos atestam a seriedade e a transparência da organização ao longo de mais de quatro décadas de atuação.
                 </p>
                 
                 <div className="grid sm:grid-cols-2 gap-6 w-full max-w-3xl relative z-10">

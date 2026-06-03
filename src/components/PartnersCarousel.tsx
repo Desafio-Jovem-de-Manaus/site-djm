@@ -19,7 +19,7 @@ export default function PartnersCarousel() {
   return (
     <section className="bg-slate-50 py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center">
-        <h2 className="text-3xl font-bold text-primary-dark mb-2 border-b-2 border-primary inline-block pb-2">Quem nos apoia</h2>
+        <h2 className="text-3xl font-bold text-primary-dark mb-2 border-b-2 border-primary inline-block pb-2">Parceiros Que Apoiam Nosso Trabalho</h2>
       </div>
 
       {/* Infinite marquee wrapper */}

@@ -9,21 +9,22 @@ function VerticalCarousel({ children, speed = 30 }: { children: React.ReactNode;
   const innerRef = useRef<HTMLDivElement>(null);
   const [paused, setPaused] = useState(false);
 
+  const posRef = useRef(0);
+
   useEffect(() => {
     const outer = outerRef.current;
     const inner = innerRef.current;
     if (!outer || !inner) return;
 
     let raf: number;
-    let pos = 0;
     // Height of one "set" of items (the first copy)
     const singleHeight = inner.scrollHeight / 2;
 
     const step = () => {
       if (!paused) {
-        pos += speed / 60; // pixels per frame at 60fps
-        if (pos >= singleHeight) pos = 0;
-        inner.style.transform = `translateY(-${pos}px)`;
+        posRef.current += speed / 60; // pixels per frame at 60fps
+        if (posRef.current >= singleHeight) posRef.current = 0;
+        inner.style.transform = `translateY(-${posRef.current}px)`;
       }
       raf = requestAnimationFrame(step);
     };
