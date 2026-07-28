@@ -19,7 +19,7 @@ const navigation: NavItem[] = [
     href: "/quem-somos",
     subItems: [
       { name: "Histórico", href: "/quem-somos#historico" },
-      { name: "Missão e Valores", href: "/quem-somos#missao" },
+      { name: "Missão, Visão e Valores", href: "/quem-somos#missao" },
       { name: "Diretoria", href: "/quem-somos#diretoria" },
       { name: "Equipe", href: "/quem-somos#equipe" },
       { name: "Estrutura física", href: "/quem-somos#estrutura" },

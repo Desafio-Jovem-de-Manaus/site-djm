@@ -1,53 +1,14 @@
-"use client";
-
 import { Award, Medal, ShieldCheck, CheckCircle2, Network, Globe, BookOpen } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
 
-/* ─── Vertical auto‑scroll carousel ─── */
-function VerticalCarousel({ children, speed = 30 }: { children: React.ReactNode; speed?: number }) {
-  const outerRef = useRef<HTMLDivElement>(null);
-  const innerRef = useRef<HTMLDivElement>(null);
-  const [paused, setPaused] = useState(false);
-
-  const posRef = useRef(0);
-
-  useEffect(() => {
-    const outer = outerRef.current;
-    const inner = innerRef.current;
-    if (!outer || !inner) return;
-
-    let raf: number;
-    // Height of one "set" of items (the first copy)
-    const singleHeight = inner.scrollHeight / 2;
-
-    const step = () => {
-      if (!paused) {
-        posRef.current += speed / 60; // pixels per frame at 60fps
-        if (posRef.current >= singleHeight) posRef.current = 0;
-        inner.style.transform = `translateY(-${posRef.current}px)`;
-      }
-      raf = requestAnimationFrame(step);
-    };
-
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf);
-  }, [paused, speed]);
-
+/* ─── Scrollable list with custom branded scrollbar ─── */
+function VerticalCarousel({ children }: { children: React.ReactNode }) {
   return (
-    <div
-      ref={outerRef}
-      className="overflow-hidden relative"
-      style={{ maxHeight: 360 }}
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-    >
-      {/* Fade masks top & bottom */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-white to-transparent z-10"></div>
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-white to-transparent z-10"></div>
+    <div className="relative" style={{ height: 360 }}>
+      {/* Fade masks */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-white to-transparent z-10" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-white to-transparent z-10" />
 
-      <div ref={innerRef} className="will-change-transform">
-        {/* Render children twice for seamless loop */}
-        {children}
+      <div className="h-full overflow-y-scroll recognitions-carousel-scrollbar">
         {children}
       </div>
     </div>
@@ -96,7 +57,7 @@ export default function RecognitionsSection({ showTitle = true }: { showTitle?: 
             <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-primary mb-6 pb-3 border-b-2 border-primary/20">
               Títulos e Homenagens
             </h3>
-            <VerticalCarousel speed={25}>
+            <VerticalCarousel>
               <div className="space-y-4 pb-4">
                 {titulos.map((item, idx) => {
                   const Icon = item.icon;
@@ -121,7 +82,7 @@ export default function RecognitionsSection({ showTitle = true }: { showTitle?: 
             <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-primary mb-6 pb-3 border-b-2 border-primary/20">
               Representação Institucional
             </h3>
-            <VerticalCarousel speed={20}>
+            <VerticalCarousel>
               <div className="space-y-4 pb-4">
                 {representacoes.map((item, idx) => {
                   const Icon = item.icon;

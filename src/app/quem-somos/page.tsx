@@ -8,7 +8,7 @@ import PartnersCarousel from "@/components/PartnersCarousel";
 export default function QuemSomosPage() {
   const sidebarItems = [
     { label: "Histórico", anchor: "historico", icon: <History className="w-5 h-5" /> },
-    { label: "Missão e Valores", anchor: "missao", icon: <Shield className="w-5 h-5" /> },
+    { label: "Missão, Visão e Valores", anchor: "missao", icon: <Shield className="w-5 h-5" /> },
     { label: "Diretoria", anchor: "diretoria", icon: <Crown className="w-5 h-5" /> },
     { label: "Equipe", anchor: "equipe", icon: <Users className="w-5 h-5" /> },
     { label: "Estrutura física", anchor: "estrutura", icon: <Building className="w-5 h-5" /> },
@@ -143,7 +143,7 @@ export default function QuemSomosPage() {
                 </div>
               </section>
 
-              {/* Missão e Valores */}
+              {/* Missão, Visão e Valores */}
               <section id="missao" className="scroll-mt-[100px] overflow-hidden bg-white rounded-3xl border border-slate-200">
                 <MissaoVisaoValores />
                 <div className="bg-slate-50 pb-10 pt-4 text-center px-8">

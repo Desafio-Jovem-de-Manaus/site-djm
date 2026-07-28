@@ -75,3 +75,28 @@ html {
 .animation-delay-300 { animation-delay: 0.3s; }
 .animation-delay-400 { animation-delay: 0.4s; }
 .animation-delay-500 { animation-delay: 0.5s; }
+
+/* ── Custom scrollbar — Recognitions Carousel ── */
+.recognitions-carousel-scrollbar {
+  scrollbar-width: thin;                        /* Firefox */
+  scrollbar-color: #30449C #e2e8f0;             /* Firefox: thumb | track */
+}
+
+.recognitions-carousel-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.recognitions-carousel-scrollbar::-webkit-scrollbar-track {
+  background: #e2e8f0;
+  border-radius: 9999px;
+}
+
+.recognitions-carousel-scrollbar::-webkit-scrollbar-thumb {
+  background: #30449C;
+  border-radius: 9999px;
+  transition: background 0.2s ease;
+}
+
+.recognitions-carousel-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #222F6D;
+}
