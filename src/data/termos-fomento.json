@@ -337,5 +337,219 @@
     ],
     "aditivos": [],
     "id": 1794942622742
+  },
+  {
+    "numeroTermo": "TF 028/2025",
+    "orgao": "Secretaria de Estado da Assistência Social e Combate à Fome (SEAS)",
+    "cnpj": "04.275.046/0001-74",
+    "dataAssinatura": "2025-08-18",
+    "origem": "Edital Público Estadual",
+    "objeto": "Conjugação de recursos técnicos e financeiros dos partícipes provenientes do Edital de Chamamento Público nº 001/2025-SEAS, para execução de oferta continuada de Proteção Social Especial de Alta Complexidade na modalidade Abrigo Institucional com 25 (vinte e cinco) vagas para indivíduos adultos, do sexo masculino, em situação de rua e desabrigo por abandono, garantindo proteção integral, convivência familiar e comunitária, acesso à rede socioassistencial, desenvolvendo condições para independência e autonomia.",
+    "valorTotal": 600000,
+    "inicioVigenciaOpcao": "outra",
+    "vigorInicioOutra": "2025-08-18",
+    "durationMeses": 12,
+    "vigorInicio": "2025-08-18",
+    "vigorFim": "2026-08-18",
+    "situacaoProjeto": "Projeto Concluído - Em Prestação de Contas",
+    "modoPrestacao": "90",
+    "dataPrestacaoEspecifica": null,
+    "dataPrevistaPrestacao": "2026-12-29",
+    "dataApresentacaoPrestacao": null,
+    "parcelas": [
+      {
+        "descricao": "1ª Parcela",
+        "valor": 300000,
+        "dataEfetivacao": null
+      },
+      {
+        "descricao": "2ª Parcela",
+        "valor": 300000,
+        "dataEfetivacao": null
+      }
+    ],
+    "remuneracao": [
+      {
+        "funcao": "Coordenadora Geral",
+        "valor": 42000
+      },
+      {
+        "funcao": "Coordenador do Acolhimento",
+        "valor": 36000
+      },
+      {
+        "funcao": "Coordenador Operacional",
+        "valor": 36000
+      },
+      {
+        "funcao": "Assistente Social",
+        "valor": 33600
+      },
+      {
+        "funcao": "Psicólogo",
+        "valor": 30000
+      },
+      {
+        "funcao": "Técnico de Nível Superior",
+        "valor": 30000
+      },
+      {
+        "funcao": "Cozinheira",
+        "valor": 30000
+      },
+      {
+        "funcao": "Auxiliar de Cozinha",
+        "valor": 21600
+      },
+      {
+        "funcao": "Assistente Administrativo",
+        "valor": 30000
+      },
+      {
+        "funcao": "Assistente Administrativo",
+        "valor": 24000
+      },
+      {
+        "funcao": "Cuidador - Nível 1",
+        "valor": 26400
+      },
+      {
+        "funcao": "Cuidador - Nível 2",
+        "valor": 24000
+      },
+      {
+        "funcao": "Cuidador - Nível 3",
+        "valor": 20400
+      },
+      {
+        "funcao": "Auxiliar de Cuidador",
+        "valor": 6000
+      },
+      {
+        "funcao": "Auxiliar de Acolhimento",
+        "valor": 4590
+      }
+    ],
+    "encargosTrabalhisticos": [
+      {
+        "descricao": "INSS Patronal",
+        "valor": 78918
+      }
+    ],
+    "materialConsumo": [
+      {
+        "descricao": "Gênero Alimentício",
+        "valor": 94259.2
+      },
+      {
+        "descricao": "Material de Limpeza e Produtos de Higienização",
+        "valor": 12422.8
+      },
+      {
+        "descricao": "Gás e Outros Materiais Engarrafados",
+        "valor": 12610
+      }
+    ],
+    "bensPermanentes": [],
+    "servcosPessoaJuridica": [
+      {
+        "descricao": "Serviços de Telefonia e Internet",
+        "valor": 7200
+      }
+    ],
+    "aditivos": [
+      {
+        "vigorInicio": "2026-08-19",
+        "vigorFim": "2026-09-30",
+        "fimVigencia": "2026-09-30",
+        "valor": 71000,
+        "remuneracao": [
+          {
+            "funcao": "Coordenadora Geral",
+            "valor": 5016.67
+          },
+          {
+            "funcao": "Coordenador do Acolhimento",
+            "valor": 4300
+          },
+          {
+            "funcao": "Coordenador Operacional",
+            "valor": 4300
+          },
+          {
+            "funcao": "Assistente Social",
+            "valor": 4013.33
+          },
+          {
+            "funcao": "Psicólogo",
+            "valor": 3583.33
+          },
+          {
+            "funcao": "Técnico de Nível Superior",
+            "valor": 3583.33
+          },
+          {
+            "funcao": "Cozinheira",
+            "valor": 3583.33
+          },
+          {
+            "funcao": "Auxiliar de Cozinha",
+            "valor": 2580
+          },
+          {
+            "funcao": "Assistente Administrativo",
+            "valor": 3583.33
+          },
+          {
+            "funcao": "Assistente Administrativo",
+            "valor": 2866.67
+          },
+          {
+            "funcao": "Cuidador - Nível 1",
+            "valor": 3153.33
+          },
+          {
+            "funcao": "Cuidador - Nível 2",
+            "valor": 2866.67
+          },
+          {
+            "funcao": "Cuidador - Nível 3",
+            "valor": 2436.67
+          },
+          {
+            "funcao": "Auxiliar de Cuidador",
+            "valor": 2150
+          },
+          {
+            "funcao": "Auxiliar de Acolhimento",
+            "valor": 2193
+          }
+        ],
+        "encargosTrabalhisticos": [
+          {
+            "descricao": "INSS Patronal",
+            "valor": 10041.93
+          }
+        ],
+        "materialConsumo": [
+          {
+            "descricao": "Gênero Alimentício",
+            "valor": 8017
+          },
+          {
+            "descricao": "Gás e Outros Materiais Engarrafados",
+            "valor": 2040
+          }
+        ],
+        "servcosPessoaJuridica": [
+          {
+            "descricao": "Serviços de Telefonia e Internet",
+            "valor": 691.41
+          }
+        ],
+        "bensPermanentes": []
+      }
+    ],
+    "id": 1795017077242
   }
 ]
