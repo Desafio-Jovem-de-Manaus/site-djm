@@ -42,10 +42,7 @@ const navigation: NavItem[] = [
     href: "/transparencia",
     subItems: [
       { name: "Prestação de contas", href: "/transparencia#prestacao-contas" },
-      { name: "Relatórios anuais", href: "/transparencia#relatorios" },
-      { name: "Documentos institucionais", href: "/transparencia#documentos" },
-      { name: "Convênios e parcerias", href: "/transparencia#convenios" },
-      { name: "Lei 13.019/2014", href: "/transparencia#legislacao" },
+      { name: "Compliance", href: "/transparencia#legislacao" },
     ],
   },
   {

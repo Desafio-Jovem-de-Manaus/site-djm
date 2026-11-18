@@ -1,0 +1,341 @@
+[
+  {
+    "numeroTermo": "TF 031/2025",
+    "orgao": "Secretaria de Estado da Assistência Social e Combate à Fome (SEAS)",
+    "cnpj": "04.275.046/0001-74",
+    "dataAssinatura": "2025-08-18",
+    "origem": "Edital Público Estadual",
+    "objeto": "Transferência de recursos financeiros provenientes do Edital de Chamamento Público nº 001/2025-SEAS, para execução de Proteção Social Especial de Média Complexidade por meio do Serviço Especializado em Abordagem Social, a 80 (oitenta) usuários, com a finalidade de assegurar o trabalho social de abordagem e busca ativa que identifique situações de direitos violados, como forma de proporcionar a inserção na rede de serviços socioassistenciais na perspectiva da garantia de direitos.",
+    "valorTotal": 269400,
+    "inicioVigenciaOpcao": "outra",
+    "vigorInicioOutra": "2025-08-18",
+    "durationMeses": 12,
+    "vigorInicio": "2025-08-18",
+    "vigorFim": "2026-08-18",
+    "situacaoProjeto": "Projeto Concluído - Em Prestação de Contas",
+    "modoPrestacao": "90",
+    "dataPrestacaoEspecifica": null,
+    "dataPrevistaPrestacao": "2026-12-29",
+    "dataApresentacaoPrestacao": null,
+    "parcelas": [
+      {
+        "descricao": "1ª Parcela",
+        "valor": 134700,
+        "dataEfetivacao": null
+      },
+      {
+        "descricao": "2ª Parcela",
+        "valor": 134700,
+        "dataEfetivacao": null
+      }
+    ],
+    "remuneracao": [
+      {
+        "funcao": "Coordenadora",
+        "valor": 40200
+      },
+      {
+        "funcao": "Técnico de Nível Superior (Assistente Social ou Psicóloga)",
+        "valor": 28800
+      },
+      {
+        "funcao": "Administrador",
+        "valor": 36000
+      },
+      {
+        "funcao": "Abordador 01",
+        "valor": 24000
+      },
+      {
+        "funcao": "Abordador 01",
+        "valor": 24000
+      },
+      {
+        "funcao": "Abordador 01",
+        "valor": 24000
+      },
+      {
+        "funcao": "Abordador 02",
+        "valor": 21600
+      }
+    ],
+    "encargosTrabalhisticos": [
+      {
+        "descricao": "INSS Patronal",
+        "valor": 39720
+      }
+    ],
+    "materialConsumo": [
+      {
+        "descricao": "Gênero Alimentício",
+        "valor": 18324.5
+      },
+      {
+        "descricao": "Material de Cama, Mesa e Banho",
+        "valor": 4800
+      },
+      {
+        "descricao": "Material de Limpeza e Produtos de Higienização",
+        "valor": 7955.5
+      }
+    ],
+    "bensPermanentes": [],
+    "servcosPessoaJuridica": [],
+    "aditivos": [
+      {
+        "vigorInicio": "2026-08-19",
+        "vigorFim": "2026-09-30",
+        "fimVigencia": "2026-09-30",
+        "valor": 32000,
+        "remuneracao": [
+          {
+            "funcao": "Coordenadora",
+            "valor": 4801.67
+          },
+          {
+            "funcao": "Técnico de Nível Superior (Assistente Social ou Psicóloga)",
+            "valor": 3440
+          },
+          {
+            "funcao": "Administrador",
+            "valor": 4300
+          },
+          {
+            "funcao": "Abordador 01",
+            "valor": 2866.67
+          },
+          {
+            "funcao": "Abordador 01",
+            "valor": 2866.67
+          },
+          {
+            "funcao": "Abordador 01",
+            "valor": 2866.67
+          },
+          {
+            "funcao": "Abordador 02",
+            "valor": 2580
+          }
+        ],
+        "encargosTrabalhisticos": [
+          {
+            "descricao": "INSS Patronal",
+            "valor": 4744.34
+          }
+        ],
+        "materialConsumo": [
+          {
+            "descricao": "Gênero Alimentício",
+            "valor": 2544.2
+          },
+          {
+            "descricao": "Material de Limpeza e Produtos de Higienização",
+            "valor": 989.78
+          }
+        ],
+        "servcosPessoaJuridica": [],
+        "bensPermanentes": []
+      }
+    ],
+    "id": 1794956982147
+  },
+  {
+    "numeroTermo": "TF 013/2026",
+    "orgao": "Secretaria de Estado da Assistência Social e Combate à Fome (SEAS)",
+    "cnpj": "04.275.046/0001-74",
+    "dataAssinatura": "2026-10-01",
+    "origem": "Edital Público Estadual",
+    "objeto": "Ofertar de forma continuada e programada Serviço da Proteção Social Especial de Média Complexidade por meio do Serviço Especializado em Abordagem Social, a 80 usuários, sendo: crianças, adolescentes, jovens, adultos, idosos e famílias que utilizam espaços públicos como forma de moradia, com a finalidade de assegurar trabalho social de abordagem e busca ativa que identifique situações de direitos violados (trabalho infantil, exploração sexual de crianças e adolescentes, situação de rua), como forma de proporcionar a inserção na rede de serviços socioassistenciais na perspectiva da garantia dos direitos.",
+    "valorTotal": 269400,
+    "inicioVigenciaOpcao": "outra",
+    "vigorInicioOutra": "2026-10-01",
+    "durationMeses": 12,
+    "vigorInicio": "2026-10-01",
+    "vigorFim": "2027-09-30",
+    "situacaoProjeto": "Projeto em Execução",
+    "modoPrestacao": "90",
+    "dataPrestacaoEspecifica": null,
+    "dataPrevistaPrestacao": "2027-12-29",
+    "dataApresentacaoPrestacao": null,
+    "parcelas": [
+      {
+        "descricao": "1ª Parcela",
+        "valor": 134700,
+        "dataEfetivacao": null
+      },
+      {
+        "descricao": "2ª Parcela",
+        "valor": 134700,
+        "dataEfetivacao": null
+      }
+    ],
+    "remuneracao": [
+      {
+        "funcao": "Coordenadora",
+        "valor": 40200
+      },
+      {
+        "funcao": "Administrador",
+        "valor": 36000
+      },
+      {
+        "funcao": "Assistente Administrativo",
+        "valor": 30000
+      },
+      {
+        "funcao": "Técnico de Nível Superior - Psicóloga",
+        "valor": 28800
+      },
+      {
+        "funcao": "Abordador 01",
+        "valor": 24000
+      },
+      {
+        "funcao": "Abordador 01",
+        "valor": 24000
+      },
+      {
+        "funcao": "Abordador 02",
+        "valor": 24000
+      }
+    ],
+    "encargosTrabalhisticos": [
+      {
+        "descricao": "INSS Patronal",
+        "valor": 41400
+      }
+    ],
+    "materialConsumo": [
+      {
+        "descricao": "Gênero Alimentício",
+        "valor": 13643.56
+      },
+      {
+        "descricao": "Material de Cama, Mesa e Banho",
+        "valor": 1280
+      },
+      {
+        "descricao": "Material de Limpeza e Produtos de Higienização",
+        "valor": 6076.44
+      }
+    ],
+    "bensPermanentes": [],
+    "servcosPessoaJuridica": [],
+    "aditivos": [],
+    "id": 1794942632998
+  },
+  {
+    "numeroTermo": "TF 021/2026",
+    "orgao": "Secretaria de Estado da Assistência Social e Combate à Fome (SEAS)",
+    "cnpj": "04.275.046/0001-74",
+    "dataAssinatura": "2026-10-01",
+    "origem": "Edital Público Estadual",
+    "objeto": "Oferta continuada de Proteção Social Especial de Alta Complexidade, por meio do Serviço de Acolhimento Institucional, na modalidade Abrigo Institucional, com 25 vagas destinadas a adultos do sexo masculino, com idade entre 18 e 60 anos incompletos, em situação de rua ou desabrigo decorrente de abandono, ausência de moradia, trânsito, falta de condições de autossustento e/ou problemas relacionados à dependência química, garantindo proteção integral, convivência familiar e comunitária, acesso à rede socioassistencial e condições para o fortalecimento da autonomia e da independência.",
+    "valorTotal": 600000,
+    "inicioVigenciaOpcao": "outra",
+    "vigorInicioOutra": "2026-10-01",
+    "durationMeses": 12,
+    "vigorInicio": "2026-10-01",
+    "vigorFim": "2027-09-30",
+    "situacaoProjeto": "Projeto em Execução",
+    "modoPrestacao": "90",
+    "dataPrestacaoEspecifica": null,
+    "dataPrevistaPrestacao": "2027-12-29",
+    "dataApresentacaoPrestacao": null,
+    "parcelas": [
+      {
+        "descricao": "1ª Parcela",
+        "valor": 300000,
+        "dataEfetivacao": null
+      },
+      {
+        "descricao": "2ª Parcela",
+        "valor": 300000,
+        "dataEfetivacao": null
+      }
+    ],
+    "remuneracao": [
+      {
+        "funcao": "Coordenadora Geral",
+        "valor": 42000
+      },
+      {
+        "funcao": "Coordenador do Acolhimento",
+        "valor": 36000
+      },
+      {
+        "funcao": "Coordenador Operacional",
+        "valor": 40200
+      },
+      {
+        "funcao": "Assistente Social",
+        "valor": 36000
+      },
+      {
+        "funcao": "Psicólogo",
+        "valor": 36000
+      },
+      {
+        "funcao": "Cozinheiro",
+        "valor": 30000
+      },
+      {
+        "funcao": "Assistente Administrativo",
+        "valor": 30000
+      },
+      {
+        "funcao": "Assistente Social",
+        "valor": 26400
+      },
+      {
+        "funcao": "Cuidador - Nível 1",
+        "valor": 52800
+      },
+      {
+        "funcao": "Cuidador - Nível 2",
+        "valor": 24000
+      },
+      {
+        "funcao": "Cuidador - Nível 3",
+        "valor": 20400
+      },
+      {
+        "funcao": "Oficineiro",
+        "valor": 18000
+      }
+    ],
+    "encargosTrabalhisticos": [
+      {
+        "descricao": "INSS Patronal",
+        "valor": 78360
+      }
+    ],
+    "materialConsumo": [
+      {
+        "descricao": "Gênero Alimentício",
+        "valor": 91835.62
+      },
+      {
+        "descricao": "Material de Limpeza e Produtos de Higienização",
+        "valor": 13164.38
+      },
+      {
+        "descricao": "Gás e Outros Materiais Engarrafados",
+        "valor": 12840
+      }
+    ],
+    "bensPermanentes": [],
+    "servcosPessoaJuridica": [
+      {
+        "descricao": "Serviços de Telefonia e Internet",
+        "valor": 6000
+      },
+      {
+        "descricao": "Licença de Softwares e Inteligência Artificial",
+        "valor": 6000
+      }
+    ],
+    "aditivos": [],
+    "id": 1794942622742
+  }
+]
